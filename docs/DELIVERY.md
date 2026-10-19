@@ -20,16 +20,27 @@ Five-alternative competition audit and real user-feedback review are in `COMPETI
 - 12 browser regressions passed (8 retained, 4 new).
 - Normal and Pages production builds passed.
 - Local static smoke under `/medcue/` passed: sample audio ready in 162 ms in one automation observation, selected-cue playback, edited 14-cue export with original timestamps, one-action review/advance, no page errors, no failed responses, no API/POST requests, and no horizontal overflow at 390 px. This one local observation is not a network or user-efficiency benchmark.
-- Historical 257-cue natural-ASR checks remain separately documented. The new source context and navigation controls have not been independently shown to improve error detection.
+- The improved server edition also passed the full 257-cue natural-ASR playback, speed, edit/undo and lossless export checks with no page errors or POST requests. New evidence was saved separately under ignored `artifacts/natural-asr/`; the frozen earlier study was not overwritten. The new source context and navigation controls have not been independently shown to improve error detection.
 
 ## Publication
 
 The directory originally inherited an unrelated home-directory Git repository, with no tracked project files and no project remote. Only this project was initialized as its own repository; the parent repository and other local projects were not published or modified.
 
-The target `Georgefifth/medcue` did not exist at the initial check. Repository creation, static deployment and hosted verification are pending at this document's initial preparation. Actual status and links will be recorded after publication; no public success is claimed here yet.
+The target `Georgefifth/medcue` did not exist at the initial check. The repository was created after the publication preflight. The Pages workflow passed, including all 21 core/API and 12 browser tests. Its environment allows the exact `codex/medcue` release branch while retaining the original `main` rule.
+
+- Repository: https://github.com/Georgefifth/medcue
+- Public site: https://georgefifth.github.io/medcue/
+- Verified application commit: `214853bef62e1b20acd50eb28ce31f690f5b427f`
+- Successful verification/deployment: https://github.com/Georgefifth/medcue/actions/runs/39260353800
+
+The actual public site passed the same end-to-end smoke: real MP3 playback, editing, one-action review/advance, 14-cue SRT download with original timing, 390-pixel overflow check, zero API/POST requests, zero page errors and zero failed responses. The real sample was ready in **832 ms** in one automation observation; this is not a general speed claim. The site was also opened in the in-app browser and its loaded recording/context and static-edition limitation inspected.
+
+The preflight scanned 82 staged files and 16 static artifact files: no configured key, obvious credential/private-key pattern or personal absolute path was found, and `.env` was excluded. This is a bounded scan plus manual review, not proof of comprehensive security. Large original evaluation audio/video and local ZIPs remain untracked; the intentionally public 301 KB NLM sample is included.
 
 ## Remaining limits
 
 GitHub Pages cannot run the Node API or protect a key placed in browser JavaScript. The hosted edition intentionally has no AI inference, transcription, database or cloud sync. The local/self-hosted server edition retains compatible cloud APIs and optional Ollama. No public backend was deployed. Provider quotas are not guaranteed by local caps and reset per process.
 
 This is not a comprehensive subtitle editor or a validated medical-correction system. Prior natural-ASR testing found both relevant AI leads and a misplaced warning on a correct term. We did not train aliases on those observed errors or repeat inference to manufacture a better result. Human time savings, retention, market demand and switching preference remain unverified. Existing tools retain substantial advantages in retiming, formats, authoring and collaboration.
+
+Sanitized before/after and hosted observations are recorded in `verification.json`. Screenshots are generated locally under `artifacts/`; the public source includes the regression and hosted-smoke scripts.

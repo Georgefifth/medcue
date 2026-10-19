@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-19",
+  "method": "Developer-run structural and browser regression checks, no human timings",
+  "before": {
+    "textareaRetainsNodeWhileTyping": false,
+    "reviewAndAdvanceActions": 2,
+    "sampleHasAudio": false,
+    "rawNlmSrtImport": "rejected-empty-cue-91",
+    "measured": "Developer-run structural workflow checks; no human timings"
+  },
+  "after": {
+    "textareaRetainsNodeWhileTyping": true,
+    "reviewAndAdvanceActions": 1,
+    "realSampleHasMatchingAudio": true,
+    "rawNlmSrtImport": "explicit preview and omission audit; 90 nonempty cues preserved",
+    "adjacentOriginalsVisible": true
+  },
+  "regressions": {
+    "core": 8,
+    "api": 13,
+    "browser": 12,
+    "passed": true
+  },
+  "staticLocalSmoke": {
+    "testedAt": "2026-10-19T13:22:33.654Z",
+    "base": "Local static server under /medcue/",
+    "sampleReadyMs": 162,
+    "measurement": "Single automation observation, not a performance benchmark or human task time",
+    "imported": 14,
+    "reviewed": 1,
+    "advancedTo": 5,
+    "exportTextAndTimingPassed": true,
+    "localPlaybackPassed": true,
+    "noHorizontalOverflowAt390px": true,
+    "apiRequests": [],
+    "postRequests": [],
+    "pageErrors": [],
+    "failedResponses": []
+  },
+  "publicationAudit": {
+    "stagedFiles": 82,
+    "builtFiles": 16,
+    "configuredCredentialMatch": false,
+    "obviousSecretPatternOrPersonalAbsolutePathMatch": false,
+    "environmentFilesExcluded": true,
+    "limitations": "Automated index/build preflight plus manual source review; not an exhaustive privacy/security audit."
+  },
+  "hostedSmoke": {
+    "testedAt": "2026-10-19T13:32:28.893Z",
+    "base": "https://georgefifth.github.io/medcue/",
+    "sampleReadyMs": 832,
+    "measurement": "Single automation observation, not a performance benchmark or human task time",
+    "imported": 14,
+    "reviewed": 1,
+    "advancedTo": 5,
+    "exportTextAndTimingPassed": true,
+    "localPlaybackPassed": true,
+    "noHorizontalOverflowAt390px": true,
+    "apiRequests": [],
+    "postRequests": [],
+    "pageErrors": [],
+    "failedResponses": []
+  },
+  "fullNaturalAsrRegression": {
+    "testedAt": "2026-10-19T13:31:02.637Z",
+    "isolatedBrowserContext": true,
+    "naturalAsr": true,
+    "results": [
+      {
+        "id": "naloxone",
+        "cueCount": 123,
+        "playbackCue": 59,
+        "playback": [
+          {
+            "speed": 0.75,
+            "seekSeconds": 162.042542,
+            "stopSeconds": 166.14394
+          },
+          {
+            "speed": 1.25,
+            "seekSeconds": 162.054143,
+            "stopSeconds": 166.156899
+          }
+        ],
+        "editedAndUndone": true,
+        "reviewed": 1,
+        "exportPreservedAllTextAndTimestamps": true,
+        "pageErrors": [],
+        "postRequests": []
+      },
+      {
+        "id": "antibiotics",
+        "cueCount": 134,
+        "playbackCue": 4,
+        "playback": [
+          {
+            "speed": 0.75,
+            "seekSeconds": 8.769,
+            "stopSeconds": 14.298043
+          },
+          {
+            "speed": 1.25,
+            "seekSeconds": 8.793697,
+            "stopSeconds": 14.303941
+          }
+        ],
+        "editedAndUndone": true,
+        "reviewed": 1,
+        "exportPreservedAllTextAndTimestamps": true,
+        "pageErrors": [],
+        "postRequests": []
+      }
+    ]
+  },
+  "publication": {
+    "repository": "https://github.com/Georgefifth/medcue",
+    "site": "https://georgefifth.github.io/medcue/",
+    "verifiedApplicationCommit": "214853bef62e1b20acd50eb28ce31f690f5b427f",
+    "workflow": "https://github.com/Georgefifth/medcue/actions/runs/39260353800"
+  }
+}

@@ -1,11 +1,14 @@
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { resolve } from 'node:path';
 import { chromium, expect } from '@playwright/test';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { importSrt } from '../../src/core.js';
 const root = new URL('./', import.meta.url);
 const naturalAsr = process.argv.includes('--natural-asr');
-const outputRoot = naturalAsr ? new URL('../editor-study/', root) : root;
+const dataRoot = naturalAsr ? new URL('../editor-study/', root) : root;
+const outputRoot = process.env.MEDCUE_EVAL_OUTPUT ? pathToFileURL(resolve(process.env.MEDCUE_EVAL_OUTPUT) + '/') : dataRoot;
+await mkdir(outputRoot, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.MEDCUE_CHROME_PATH || '/usr/bin/google-chrome', headless: true });
 const results = [];
 try {
@@ -18,7 +21,7 @@ try {
     // No inference calls or use of the owner's browser draft in this test.
     await page.route('**/api/review', r => r.abort());
     await page.goto(process.env.MEDCUE_EVAL_URL || 'http://127.0.0.1:8080');
-    const subtitle = naturalAsr ? fileURLToPath(new URL(id + '-asr.srt', outputRoot)) : fileURLToPath(new URL(id === 'naloxone' ? 'naloxone-review.srt' : 'antibiotics.srt', root));
+    const subtitle = naturalAsr ? fileURLToPath(new URL(id + '-asr.srt', dataRoot)) : fileURLToPath(new URL(id === 'naloxone' ? 'naloxone-review.srt' : 'antibiotics.srt', root));
     const cues = importSrt(await readFile(subtitle, 'utf8'));
     await page.locator('#srt-file').setInputFiles(subtitle);
     await expect(page.locator('#cue-count')).toHaveText(String(cues.length));
