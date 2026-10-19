@@ -10,19 +10,22 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const icon = name => `<i data-lucide="${name}" aria-hidden="true"></i>`;
 const key = 'medcue-project-v1';
+const positionKey = 'medcue-position-v1';
 const staticSite = import.meta.env.MODE === 'pages';
 const assetBase = import.meta.env.BASE_URL;
-let pendingImport = null, typingCueId = null, sampleBusy = false;
+let pendingImport = null, typingCueId = null, sampleBusy = false, sampleCuesPromise = null, sampleCues = null;
 let project = { format: 'medcue-1', name: 'Untitled review', cues: [], glossary: DEFAULT_GLOSSARY, audit: [] };
 let aiCooldownUntil = 0, aiConfigReady = false, aiConfigured = false, aiMinimumIntervalMs = 15000, aiCueId = null;
 try { aiCooldownUntil = Math.min(Date.now() + 86400000, Number(sessionStorage.getItem('medcue-ai-cooldown')) || 0); } catch {}
 let selected = 0, filter = 'All cues', query = '', audioUrl = '', player, ready = false, clipEnd = null, undo = [], aiResults = new Map(), aiBusy = false, revision = 0, toastTimer;
 try { const saved = localStorage.getItem(key); if (saved) project = validateProject(JSON.parse(saved)); } catch { /* A corrupt draft never prevents startup. */ }
 
+try { const position = Number(localStorage.getItem(positionKey)); if (Number.isInteger(position) && position >= 0 && position < project.cues.length) selected = position; } catch {}
+
 $('#app').innerHTML = `
 <header class="topbar"><a class="brand" href="${assetBase}" aria-label="MedCue home"><span class="brand-icon">${icon('audio-lines')}</span>MedCue<span class="brand-tag">Subtitle review desk</span></a><span class="local-note">${icon('shield-check')} Audio stays on this device</span><button class="button primary" id="export">${icon('download')} Export SRT</button></header>
 <div class="workspace"><aside class="sidebar"><div class="project-heading"><span class="folder">${icon('folder-open')}</span><div><p class="muted small">Current project</p><h1 id="project-name"></h1></div></div><button id="import" class="button import-button">${icon('plus')} Open subtitles</button><button id="audio-import" class="button quiet">${icon('headphones')} Attach audio</button><div class="section-label">Review queue</div><nav id="filters" aria-label="Filter cues"></nav><div class="sidebar-bottom"><div id="progress"></div><button id="glossary-open" class="button quiet">${icon('book-open')} Your terminology</button><button id="save-project" class="button quiet">${icon('save')} Save project</button><button id="restore-project" class="button quiet">${icon('folder-input')} Open project</button><button id="real-sample-reopen" class="demo-link">Recording example</button><button id="demo" class="demo-link">Try fictional text</button></div></aside>
-<main><div class="desk-heading"><div><h2>Review the recording.</h2><p class="muted small">Check the words. Keep the speaker’s meaning.</p></div><span class="mode-tag" id="edition-label">Local review workspace</span></div><div class="review-layout"><section class="cue-panel" aria-label="Subtitle cues"><div class="panel-heading"><h3>Transcript <span id="cue-count"></span></h3><button class="icon-button" id="next" aria-label="Next unreviewed cue" title="Next unreviewed cue">${icon('skip-forward')}</button></div><label class="search">${icon('search')}<input id="search" placeholder="Find a word or phrase" aria-label="Search subtitles"></label><div id="cue-list"></div></section><section class="editing-column"><div class="audio-panel"><div class="audio-heading"><span>${icon('headphones')} Listen in context</span><label class="speed-label">Speed<select id="speed" aria-label="Playback speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option></select></label></div><div id="waveform"></div><div class="player-bottom"><button id="play" disabled class="play-button" aria-label="Replay selected cue" aria-keyshortcuts="Shift+Space">${icon('play')}</button><div><strong id="audio-title">Attach audio to listen</strong><p id="audio-status" class="muted small" role="status">MP3, WAV, M4A or OGG • audio is never uploaded</p></div><button id="stop" disabled class="icon-button" aria-label="Pause audio">${icon('pause')}</button></div></div><div id="editor"></div><div class="review-note">${icon('ear')} A signal is a reason to listen, not proof of an error.</div><details class="audit-panel"><summary>Review activity <span id="audit-count"></span></summary><ol id="audit-list"></ol></details></section><aside class="evidence-column"><div class="panel-heading"><h3>Review signals</h3>${icon('scan-text')}</div><div id="signals"></div><div class="ai-panel"><div class="ai-title">${icon('sparkles')} Optional AI check</div><p>Check this cue’s text for possible wording issues. Suggestions are unverified; AI cannot hear your recording.</p><button id="ai" class="button">Check with AI</button><p class="muted small"><span id="ai-disclosure">Checking where AI review runs. Audio is never sent.</span></p><p id="ai-wait" class="small" role="status" hidden></p><div id="ai-results" aria-live="polite"></div></div><div class="evidence-foot">Your glossary is the reference.<br>The recording is the evidence.<br>You make the final call.</div></aside></div></main></div>
+<main><div class="desk-heading"><div><h2>Review the recording.</h2><p class="muted small">Check the words. Keep the speaker’s meaning.</p></div><span class="mode-tag" id="edition-label">Local review workspace</span></div><div class="review-layout"><section class="cue-panel" aria-label="Subtitle cues"><div class="panel-heading"><h3>Transcript <span id="cue-count"></span></h3><button class="icon-button" id="next" aria-label="Next unreviewed cue" title="Next unreviewed cue">${icon('skip-forward')}</button></div><label class="search">${icon('search')}<input id="search" placeholder="Find a word or phrase" aria-label="Search subtitles"></label><div id="cue-list"></div></section><section class="editing-column"><div class="audio-panel"><div class="audio-heading"><span>${icon('headphones')} Listen in context</span><label class="speed-label">Speed<select id="speed" aria-label="Playback speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option></select></label></div><div id="waveform"></div><div class="player-bottom"><button id="play" disabled class="play-button" aria-label="Replay selected cue" aria-keyshortcuts="Shift+Space">${icon('play')}</button><div><strong id="audio-title">Attach audio to listen</strong><p id="audio-status" class="muted small" role="status">MP3, WAV, M4A or OGG • audio is never uploaded</p></div><button id="stop" disabled class="icon-button" aria-label="Pause audio">${icon('pause')}</button></div><div id="audio-recovery" class="audio-recovery" hidden><p>Audio is not attached. Your subtitle edits are kept; attach matching audio to listen.</p><button id="restore-sample-audio" class="button" hidden>Restore example audio</button></div></div><div id="editor"></div><div class="review-note">${icon('ear')} A signal is a reason to listen, not proof of an error.</div><details class="audit-panel"><summary>Review activity <span id="audit-count"></span></summary><ol id="audit-list"></ol></details></section><aside class="evidence-column"><div class="panel-heading"><h3>Review signals</h3>${icon('scan-text')}</div><div id="signals"></div><div class="ai-panel"><div class="ai-title">${icon('sparkles')} Optional AI check</div><p>Check this cue’s text for possible wording issues. Suggestions are unverified; AI cannot hear your recording.</p><button id="ai" class="button">Check with AI</button><p class="muted small"><span id="ai-disclosure">Checking where AI review runs. Audio is never sent.</span></p><p id="ai-wait" class="small" role="status" hidden></p><div id="ai-results" aria-live="polite"></div></div><div class="evidence-foot">Your glossary is the reference.<br>The recording is the evidence.<br>You make the final call.</div></aside></div></main></div>
 <footer><span>Built for medical education editors</span><span id="save-status">Ready for your first subtitle file</span></footer>
 <input type="file" id="srt-file" accept=".srt" hidden><input type="file" id="audio-file" accept="audio/*" hidden><input type="file" id="project-file" accept=".json" hidden>
 <div id="toast" role="status" hidden></div>
@@ -32,7 +35,7 @@ $('#app').innerHTML = `
 function notify(message) { $('#toast').textContent = message; $('#toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => $('#toast').hidden = true, 5500); }
 function record(message) { project.audit.push(`${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} — ${message}`); project.audit = project.audit.slice(-1000); }
 function persist() { try { localStorage.setItem(key, JSON.stringify(project)); $('#save-status').textContent = 'Draft saved on this browser • reattach audio after reload'; } catch { $('#save-status').textContent = 'Browser storage unavailable • use Save project to keep your work'; } }
-function checkpoint() { typingCueId = null; undo.push(JSON.stringify(project)); if (undo.length > 40) undo.shift(); revision++; }
+function checkpoint() { typingCueId = null; undo.push({ project: JSON.stringify(project), selected }); if (undo.length > 40) undo.shift(); revision++; }
 const signalCache = new Map();
 function cueSignals(c) {
   const signature = JSON.stringify([c.text, c.from, c.to, project.glossary, project.cues[c.id]?.from]);
@@ -46,6 +49,8 @@ function current() { return project.cues[selected]; }
 function displayTime(ms) { return stamp(ms, '.').slice(0, 8); }
 function matches(c) { const signals = cueSignals(c); return (!query || c.text.toLowerCase().includes(query)) && (filter === 'All cues' || (filter === 'Reviewed' ? c.reviewed : filter === 'Needs review' ? !c.reviewed : signals.some(s => s.type === filter))); }
 function render({ preserveEditor = false } = {}) {
+  try { localStorage.setItem(positionKey, String(selected)); } catch {}
+  renderAudioRecovery();
   $('#project-name').textContent = project.name;
   const reviewed = project.cues.filter(c => c.reviewed).length;
   const names = ['All cues', 'Needs review', 'Terms', 'Numbers', 'Meaning', 'Timing', 'Reviewed'];
@@ -66,7 +71,7 @@ function render({ preserveEditor = false } = {}) {
 function renderEditor() {
   const c = current();
   if (!c) { $('#editor').innerHTML = `<div class="welcome"><div class="welcome-symbol">${icon('text-cursor-input')}</div><h2>Start with the recording.</h2><p>Open existing subtitles and attach their audio. Listen, correct the text, and export with the timing intact.</p><button class="button primary" id="real-sample">Try a real recording</button><p class="sample-credit">37 seconds of public NLM audio with actual automatic captions. <a href="https://medlineplus.gov/medlineplus-videos/antibiotics-vs-bacteria-fighting-the-resistance/" target="_blank" rel="noopener">View the source</a></p><button class="demo-link" id="welcome-demo">Explore a sample review</button><p class="muted small">The text-only example is fictional.</p></div>`; $('#signals').innerHTML = '<p class="muted signal-empty">Open subtitles to see review signals.</p>'; renderAi(); updateAiControls(); return; }
-  $('#editor').innerHTML = `<article class="editor-card"><div class="editor-card-heading"><div><span class="cue-number">Cue ${String(c.id).padStart(2, '0')}</span><span class="time-pill">${stamp(c.from, '.')} — ${stamp(c.to, '.')}</span></div><span class="status-tag ${c.reviewed ? 'done' : ''}">${c.reviewed ? 'Reviewed' : 'Awaiting review'}</span></div><div class="source-context" role="note" aria-label="Nearby original subtitles">${selected > 0 ? `<p><span>Before</span>${esc(project.cues[selected - 1].original)}</p>` : ''}${selected + 1 < project.cues.length ? `<p><span>After</span>${esc(project.cues[selected + 1].original)}</p>` : ''}</div><div class="original-block"><span class="field-label">Original subtitle</span><p>${esc(c.original)}</p></div><label class="field-label" for="cue-text">Your final subtitle</label><textarea id="cue-text" rows="5" spellcheck="true">${esc(c.text)}</textarea><div class="editor-meta"><span id="character-count">${c.text.length} characters</span><span>Timing stays unchanged</span></div><div class="editor-actions"><button class="button quiet" id="undo" ${undo.length ? '' : 'disabled'}>${icon('undo-2')} Undo</button><button class="button quiet" id="reset" ${c.text === c.original ? 'disabled' : ''}>Reset text</button><button class="button quiet" id="review">${icon(c.reviewed ? 'rotate-ccw' : 'check')} ${c.reviewed ? 'Reopen cue' : 'Mark reviewed'}</button><button class="button primary" id="review-next" aria-keyshortcuts="Control+Enter Meta+Enter" title="Ctrl or Command + Enter">Review & next ${icon('skip-forward')}</button></div><p class="keyboard-help"><span><kbd>Ctrl / ⌘</kbd> + <kbd>Enter</kbd> review & next</span><span><kbd>Shift</kbd> + <kbd>Space</kbd> replay</span></p></article>`;
+  $('#editor').innerHTML = `<article class="editor-card"><div class="editor-card-heading"><div><span class="cue-number">Cue ${String(c.id).padStart(2, '0')}</span><span class="time-pill">${stamp(c.from, '.')} — ${stamp(c.to, '.')}</span></div><span class="status-tag ${c.reviewed ? 'done' : ''}">${c.reviewed ? 'Reviewed' : 'Awaiting review'}</span></div><div class="source-context" role="note" aria-label="Nearby original subtitles">${selected > 0 ? `<p><span>Before</span>${esc(project.cues[selected - 1].original)}</p>` : ''}${selected + 1 < project.cues.length ? `<p><span>After</span>${esc(project.cues[selected + 1].original)}</p>` : ''}</div><div class="original-block"><span class="field-label">Original subtitle</span><p>${esc(c.original)}</p></div><label class="field-label" for="cue-text">Your final subtitle</label><textarea id="cue-text" rows="5" maxlength="30000" spellcheck="true">${esc(c.text)}</textarea><div class="editor-meta"><span id="character-count">${c.text.length} characters</span><span>Timing stays unchanged</span></div><div class="editor-actions"><button class="button quiet" id="undo" ${undo.length ? '' : 'disabled'}>${icon('undo-2')} Undo</button><button class="button quiet" id="reset" ${c.text === c.original ? 'disabled' : ''}>Reset text</button><button class="button quiet" id="review">${icon(c.reviewed ? 'rotate-ccw' : 'check')} ${c.reviewed ? 'Reopen cue' : 'Mark reviewed'}</button><button class="button primary" id="review-next" aria-keyshortcuts="Control+Enter Meta+Enter" title="Ctrl or Command + Enter">Review & next ${icon('skip-forward')}</button></div><p class="keyboard-help"><span><kbd>Ctrl / ⌘</kbd> + <kbd>Enter</kbd> review & next</span><span><kbd>Shift</kbd> + <kbd>Space</kbd> replay</span></p></article>`;
   renderSignals();
   $('#cue-text').addEventListener('input', e => {
     if (c.text === e.target.value) return;
@@ -127,22 +132,50 @@ function acceptImport(pending) {
   setProject({ format: 'medcue-1', name: pending.name.replace(/\.srt$/i, ''), cues: pending.cues, glossary: project.glossary, audit: [`Imported ${pending.cues.length} cues from ${pending.name}`, ...omissions] });
   notify(`${pending.cues.length} cues imported. Attach matching audio to begin listening.`);
 }
-async function loadRealSample(button) {
-  if (sampleBusy || !(await confirmReplace())) return;
+function sameSampleOriginals() {
+  return sampleCues?.length === project.cues.length && sampleCues.every((c, i) => {
+    const actual = project.cues[i];
+    return c.from === actual.from && c.to === actual.to && c.original === actual.original;
+  });
+}
+function renderAudioRecovery() {
+  $('#audio-recovery').hidden = ready || !project.cues.length;
+  $('#restore-sample-audio').hidden = !sameSampleOriginals();
+  $('#restore-sample-audio').disabled = sampleBusy;
+}
+async function getSampleCues() {
+  if (!sampleCuesPromise) sampleCuesPromise = (async () => {
+    const response = await fetch(assetBase + 'sample/antibiotics.srt', { signal: AbortSignal.timeout(25000) });
+    if (!response.ok) throw new Error('Example subtitles are unavailable.');
+    sampleCues = importSrt(await response.text());
+    return sampleCues;
+  })().catch(error => { sampleCuesPromise = null; throw error; });
+  return sampleCuesPromise;
+}
+async function identifyRestoredSample() {
+  // A cheap candidate check avoids fetching example metadata for unrelated projects.
+  // Every original text and timestamp must match before offering its recording.
+  if (project.cues.length !== 14 || project.cues[0].original !== 'MedlinePlus presents antibiotics versus') return;
+  try { await getSampleCues(); renderAudioRecovery(); } catch { /* Manual audio attachment remains available. */ }
+}
+async function loadRealSample(button, audioOnly = false) {
+  if (sampleBusy || (!audioOnly && !(await confirmReplace()))) return;
   sampleBusy = true;
   const startRevision = revision;
   const label = button?.textContent || 'Try a real recording';
   if (button) { button.disabled = true; button.textContent = 'Loading recording…'; button.setAttribute('aria-busy', 'true'); }
   try {
-    const [subtitleResponse, audioResponse] = await Promise.all([fetch(assetBase + 'sample/antibiotics.srt'), fetch(assetBase + 'sample/antibiotics.mp3')]);
-    if (!subtitleResponse.ok || !audioResponse.ok) throw new Error('The sample could not be loaded. Try again, or open your own subtitles and audio.');
-    const cues = importSrt(await subtitleResponse.text()), audio = await audioResponse.blob();
+    const [cues, audioResponse] = await Promise.all([getSampleCues(), fetch(assetBase + 'sample/antibiotics.mp3', { signal: AbortSignal.timeout(25000) })]);
+    if (!audioResponse.ok) throw new Error('The sample could not be loaded. Try again, or attach your own audio.');
+    const audio = await audioResponse.blob();
     if (revision !== startRevision) { notify('Sample loading stopped because your review changed. Your work is kept.'); return; }
-    setProject({ format: 'medcue-1', name: 'Antibiotics · NLM recording', cues, glossary: DEFAULT_GLOSSARY, audit: ['Source: MedlinePlus, National Library of Medicine. Public-domain audio excerpt with actual YouTube automatic captions, not medically verified.'] });
+    if (audioOnly) {
+      if (!sameSampleOriginals()) throw new Error('These subtitles do not match the example. Attach their matching audio instead.');
+    } else setProject({ format: 'medcue-1', name: 'Antibiotics · NLM recording', cues: cues.map(c => ({ ...c })), glossary: DEFAULT_GLOSSARY, audit: ['Source: MedlinePlus, National Library of Medicine. Public-domain audio excerpt with actual YouTube automatic captions, not medically verified.'] });
     await loadAudio(new File([audio], 'NLM-antibiotics-excerpt.mp3', { type: 'audio/mpeg' }));
-    notify('Real recording loaded. Automatic captions may contain errors; compare them with the audio.');
-  } catch (error) { notify(error.message || 'The sample could not be loaded. Open your own files to continue.'); }
-  finally { sampleBusy = false; if (button?.isConnected) { button.disabled = false; button.textContent = label; button.removeAttribute('aria-busy'); } }
+    if (ready) notify(audioOnly ? 'Example audio restored. Your edits and review decisions are kept.' : 'Real recording loaded. Automatic captions may contain errors; compare them with the audio.');
+  } catch { notify('The sample could not be loaded. Try again, or attach matching audio. Your review is kept.'); }
+  finally { sampleBusy = false; if (button?.isConnected) { button.disabled = false; button.textContent = label; button.removeAttribute('aria-busy'); } renderAudioRecovery(); }
 }
 async function loadAudio(file) {
   if (file.size > 150 * 1024 * 1024) throw new Error('Choose audio smaller than 150 MB.');
@@ -151,16 +184,16 @@ async function loadAudio(file) {
   $('#audio-title').textContent = file.name;
   $('#audio-status').textContent = 'Preparing audio…';
   player = WaveSurfer.create({ container: '#waveform', height: 70, waveColor: '#c0d7db', progressColor: '#126c75', cursorColor: '#143343', barWidth: 3, barGap: 3, barRadius: 2, normalize: true });
-  player.on('ready', () => { ready = true; $('#play').disabled = !current(); $('#stop').disabled = false; $('#audio-status').textContent = `${displayTime(player.getDuration() * 1000)} • Replay includes 1 second of context`; player.setPlaybackRate(Number($('#speed').value)); });
+  player.on('ready', () => { ready = true; renderAudioRecovery(); $('#play').disabled = !current(); $('#stop').disabled = false; $('#audio-status').textContent = `${displayTime(player.getDuration() * 1000)} • Replay includes 1 second of context`; player.setPlaybackRate(Number($('#speed').value)); });
   player.on('play', () => { $('#audio-status').textContent = 'Playing selected cue with context'; });
   player.on('pause', () => { $('#audio-status').textContent = 'Paused • Replay includes 1 second of context'; });
   player.on('finish', () => { $('#audio-status').textContent = 'Audio finished • Replay to listen again'; });
   player.on('timeupdate', time => { if (clipEnd !== null && time >= clipEnd) stop(); });
-  player.on('error', () => { ready = false; $('#play').disabled = true; $('#stop').disabled = true; $('#audio-status').textContent = 'This audio could not be decoded. Try MP3 or WAV.'; });
-  try { await player.load(audioUrl); } catch { ready = false; notify('This audio could not be decoded. Try MP3 or WAV.'); }
+  player.on('error', () => { ready = false; renderAudioRecovery(); $('#play').disabled = true; $('#stop').disabled = true; $('#audio-status').textContent = 'This audio could not be decoded. Try MP3 or WAV.'; });
+  try { await player.load(audioUrl); } catch { ready = false; renderAudioRecovery(); notify('This audio could not be decoded. Try MP3 or WAV.'); }
 }
 function download(content, name, type) { const url = URL.createObjectURL(new Blob([content], { type })); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
-function setProject(value) { $('#play').disabled = true; $('#stop').disabled = true; stop(); player?.destroy(); player = undefined; ready = false; if (audioUrl) URL.revokeObjectURL(audioUrl); audioUrl = ''; $('#audio-title').textContent = 'Attach audio to listen'; $('#audio-status').textContent = 'MP3, WAV, M4A or OGG • audio is never uploaded'; project = value; signalCache.clear(); selected = 0; filter = 'All cues'; query = ''; $('#search').value = ''; undo = []; aiResults.clear(); revision++; persist(); render(); }
+function setProject(value) { $('#play').disabled = true; $('#stop').disabled = true; stop(); player?.destroy(); player = undefined; ready = false; if (audioUrl) URL.revokeObjectURL(audioUrl); audioUrl = ''; $('#audio-title').textContent = 'Attach audio to listen'; $('#audio-status').textContent = 'MP3, WAV, M4A or OGG • audio is never uploaded'; project = value; signalCache.clear(); selected = 0; filter = 'All cues'; query = ''; $('#search').value = ''; undo = []; aiResults.clear(); revision++; persist(); render(); identifyRestoredSample(); }
 async function confirmReplace() { return !project.cues.length || confirm('Replace this review? Save a project file first if you want to keep it.'); }
 async function readText(file, limit) { if (file.size > limit) throw new Error('This file is too large.'); return file.text(); }
 document.addEventListener('click', async e => {
@@ -171,6 +204,7 @@ document.addEventListener('click', async e => {
     if (button.dataset.cue) { stop(); selected = project.cues.findIndex(c => c.id === Number(button.dataset.cue)); render(); }
     if (button.dataset.suggestion !== undefined) { const c = current(); const s = cueSignals(c)[Number(button.dataset.suggestion)]; if (s?.replacement) { checkpoint(); c.text = replaceAlias(c.text, s.match, s.replacement); c.reviewed = false; aiResults.delete(c.id); record(`Applied glossary spelling to cue ${c.id}`); persist(); render(); } }
     switch (button.id) {
+      case 'restore-sample-audio': await loadRealSample(button, true); break;
       case 'real-sample': case 'real-sample-reopen': await loadRealSample(button); break;
       case 'import-confirm': if (pendingImport) { const pending = pendingImport; pendingImport = null; $('#import-dialog').close(); if (await confirmReplace()) acceptImport(pending); } break;
       case 'import-cancel': pendingImport = null; $('#import-dialog').close(); break;
@@ -182,7 +216,7 @@ document.addEventListener('click', async e => {
       case 'play': if (!ready) notify('Attach a supported audio file to listen in context.'); else if (!current()) notify('Open subtitles first.'); else if (current().from / 1000 >= player.getDuration()) notify('This cue starts beyond the attached audio. Check that the files match.'); else { clipEnd = Math.min(player.getDuration(), current().to / 1000 + 0.5); await player.play(Math.max(0, current().from / 1000 - 1)); } break;
       case 'stop': stop(); break;
       case 'reset': checkpoint(); current().text = current().original; current().reviewed = false; aiResults.delete(current().id); record(`Reset cue ${current().id} to original`); persist(); render(); break;
-      case 'undo': if (undo.length) { project = validateProject(JSON.parse(undo.pop())); revision++; aiResults.clear(); persist(); render(); } break;
+      case 'undo': if (undo.length) { const previous = undo.pop(); stop(); project = validateProject(JSON.parse(previous.project)); selected = previous.selected; revision++; aiResults.clear(); persist(); render(); } break;
       case 'review-next': if (!current()?.text.trim()) throw new Error('Add subtitle text before marking this cue reviewed.'); if (!current().reviewed) { checkpoint(); current().reviewed = true; record(`Reviewed cue ${current().id}`); persist(); } advanceReview(); break;
       case 'review': if (!current().text.trim()) throw new Error('Add subtitle text before marking this cue reviewed.'); checkpoint(); current().reviewed = !current().reviewed; record(`${current().reviewed ? 'Reviewed' : 'Reopened'} cue ${current().id}`); persist(); render(); break;
       case 'glossary-open': $('#glossary-text').value = project.glossary; $('#glossary-dialog').showModal(); break;
@@ -228,6 +262,7 @@ $('#srt-file').addEventListener('change', async e => { const file = e.target.fil
 $('#audio-file').addEventListener('change', async e => { try { if (e.target.files[0]) await loadAudio(e.target.files[0]); } catch (error) { notify(error.message); } finally { e.target.value = ''; } });
 $('#project-file').addEventListener('change', async e => { try { if (!e.target.files[0]) return; const value = validateProject(JSON.parse(await readText(e.target.files[0], 4_000_000))); if (await confirmReplace()) { setProject(value); notify('Project restored. Reattach its audio to listen.'); } } catch (error) { notify(error.message || 'Could not read this project.'); } finally { e.target.value = ''; } });
 render();
+identifyRestoredSample();
 if (project.cues.length) $('#save-status').textContent = 'Draft restored on this browser • reattach audio to listen';
 
 if (staticSite) {

@@ -51,3 +51,11 @@ test('project recovery preserves original, edits and review decisions; rejects m
   assert.throws(() => exportSrt([{ ...cues[0], text: ' ' }]));
   assert.throws(() => exportSrt([{ ...cues[0], text: 'First\n\nSecond' }]));
 });
+
+test('import and project recovery share the per-cue text limit', () => {
+  const input = text => `1\n00:00:00,000 --> 00:00:05,000\n${text}`;
+  const cues = importSrt(input('x'.repeat(30000)));
+  assert.equal(validateProject({ format: 'medcue-1', cues, glossary: '', audit: [] }).cues[0].text.length, 30000);
+  assert.throws(() => importSrt(input('x'.repeat(30001))), /30,000-character/);
+  assert.throws(() => previewSrtImport(input('x'.repeat(30001))), /30,000-character/);
+});

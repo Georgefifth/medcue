@@ -92,6 +92,10 @@ main { flex: 1; min-width: 0; max-width: 1700px; margin: 0 auto; padding: 26px 2
 .player-bottom strong { display: block; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .player-bottom p { font-size: 11px; margin: 4px 0 0; }
 .play-button { display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--action); color: white; width: 38px; height: 38px; flex-shrink: 0; }
+.audio-recovery { margin-top: 14px; padding: 12px; background: #edf5f5; border-left: 3px solid var(--action); }
+.audio-recovery button[hidden], .audio-recovery[hidden] { display: none; }
+.audio-recovery p { margin: 0; font-size: 13px; }
+.audio-recovery .button { margin-top: 9px; font-size: 13px; }
 .editor-card { background: white; border: 1px solid var(--divider); border-top: 0; border-radius: 0 0 5px 5px; padding: 20px; }
 .editor-card-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 7px; margin-bottom: 16px; }
 .cue-number { display: block; font-size: 15px; font-weight: 600; margin-bottom: 5px; }

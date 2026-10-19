@@ -38,6 +38,7 @@ export function importSrt(input) {
   let previous = -1;
   return entries.map((e, i) => {
     if (!Number.isFinite(e.from) || !Number.isFinite(e.to) || e.to > 359999999 || e.to <= e.from || e.from < previous || !e.text.trim()) throw new Error(`Cue ${i + 1} has empty text, invalid timing or is out of order.`);
+    if (e.text.length > 30000) throw new Error(`Cue ${i + 1} exceeds the 30,000-character project limit. No cues were imported.`);
     previous = e.from;
     return { id: i + 1, from: e.from, to: e.to, original: e.text, text: e.text, reviewed: false };
   });

@@ -8,18 +8,18 @@ A local-first desk for reviewing existing English education subtitles against a 
 
 The GitHub Pages edition runs editing, glossary rules, audio playback, project recovery and SRT export in your browser. It has **no AI backend**, collects no API key, and makes no inference requests. Audio is not uploaded. GitHub still serves the site and may log normal visit metadata; this is not a claim of anonymous hosting.
 
-Choose **Try a real recording** to load a 37.5-second public NLM audio excerpt and its actual automatic captions together. The captions contain real transcription differences; nothing is automatically corrected. Attribution and source permission are in [the sample notice](public/sample/ATTRIBUTION.md). The separate **Explore a sample review** option contains fictional text without audio. **Recording example** in the sidebar can load the real example again after a refresh; it asks before replacing your current review, so save your edits first.
+Choose **Try a real recording** to load a 37.5-second public NLM audio excerpt and its actual automatic captions together. The captions contain real transcription differences; nothing is automatically corrected. Attribution and source permission are in [the sample notice](public/sample/ATTRIBUTION.md). The separate **Explore a sample review** option contains fictional text without audio. **Restore example audio** reattaches its recording after a refresh without replacing edits or review decisions. It is offered only when every original cue and timestamp matches the example. **Recording example** in the sidebar starts a new example review and still asks before replacing your work.
 
 ## Review workflow
 
 1. **Open subtitles** with UTF-8 SRT, then **Attach audio** with matching MP3, WAV, M4A or OGG. Codec support varies by browser. An empty-cue preview lists omissions for explicit confirmation; Cancel keeps the current project. Malformed text/timing still rejects atomically.
 2. Select a cue. Read the original and neighboring original subtitles; replay starts one second before and stops half a second after the cue, bounded by the recording. Use 0.75×, 1× or 1.25× playback.
 3. Edit the final subtitle. The original remains unchanged. Signals are reasons to listen, not proof of errors.
-4. **Review & next** (Ctrl/Cmd+Enter) records the decision and advances to the next matching unreviewed cue, respecting the current search/filter and wrapping. **Mark reviewed / Reopen cue** changes a decision without moving. **Undo** restores edits or review decisions. Shift+Space replays while editing.
+4. **Review & next** (Ctrl/Cmd+Enter) records the decision and advances to the next matching unreviewed cue, respecting the current search/filter and wrapping. **Mark reviewed / Reopen cue** changes a decision without moving. **Undo** restores edits or review decisions and returns to their cue. Shift+Space replays while editing.
 5. **Export SRT** includes every imported nonempty cue, with a pending count. Original timestamps/order are preserved and sequence numbers normalized. Empty edited text or internal blank lines block export.
 6. **Save project** downloads originals, edits, glossary, decisions and audit entries. **Open project** restores them. Audio must be reattached after reload or restore.
 
-One browser draft is retained in localStorage. Download a project before switching; clearing browser data removes the draft. Browser storage is persistent on this profile, not an encrypted medical-record store. Original files on your device are not modified. Empty source cues omitted through explicit import confirmation are recorded in the project audit.
+One browser draft and its selected cue are retained in localStorage. Download a project before switching; clearing browser data removes the draft. Browser storage is persistent on this profile, not an encrypted medical-record store. Original files on your device are not modified. Empty source cues omitted through explicit import confirmation are recorded in the project audit.
 
 ## Terminology and limits
 
@@ -34,7 +34,7 @@ Haemoglobin
 
 Only editor-provided aliases trigger spelling replacements, with word boundaries and an explicit click. The default is a small demonstration list, not a medical dictionary. Canonical terms alone do not detect arbitrary mishearings. Changing terminology resets review decisions. Number/qualifier/timing signals do not establish correctness. Subtitle markup is displayed literally and never executed.
 
-Limits: English SRT, 2 MB, 1–5,000 source cues, timestamps below 100 hours; audio up to 150 MB. Very large permitted files have not been performance-benchmarked. No transcription, translation, timing editor, accounts, team sync or clinical validation is provided. Comprehensive subtitle authoring is already served by Subtitle Edit and Aegisub.
+Limits: English SRT, 2 MB, 1–5,000 source cues, at most 30,000 characters per cue, timestamps below 100 hours; audio up to 150 MB. Very large permitted files have not been performance-benchmarked. No transcription, translation, timing editor, accounts, team sync or clinical validation is provided. Comprehensive subtitle authoring is already served by Subtitle Edit and Aegisub.
 
 ## Run with a server
 
@@ -86,7 +86,9 @@ Playwright needs its browser (`npx playwright install chromium`) or an explicit 
 
 - [Competition and user feedback](docs/COMPETITION.md): five alternatives, sources and trial boundaries.
 - [Priorities and design acceptance](docs/IMPROVEMENT-PLAN.md).
-- [Delivery and measured differences](docs/DELIVERY.md).
+- [Submission polish and acceptance](docs/RELEASE-CANDIDATE.md).
+- [Submission PDF and demo script](docs/SUBMISSION.md).
+- [Earlier delivery and measured differences](docs/DELIVERY.md).
 - [Initial synthetic exploration](evaluation/REPORT.md): explicitly author-adapted/fictional, not real ASR.
 - [Public audio compatibility](evaluation/public-audio/README.md).
 - [Natural ASR and existing-tool walkthrough](evaluation/editor-study/README.md): four selected natural differences, relevant and misplaced AI leads; not population accuracy.

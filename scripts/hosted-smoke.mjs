@@ -51,6 +51,20 @@ try {
   await page.getByRole('button', { name: 'Review & next', exact: true }).click();
   await expect(page.locator('.cue-number')).toHaveText('Cue 05');
   await expect(page.locator('#progress')).toContainText('1 of 14');
+  await page.getByRole('button', { name: 'Undo', exact: true }).click();
+  await expect(page.locator('.cue-number')).toHaveText('Cue 04');
+  await expect(page.locator('#progress')).toContainText('0 of 14');
+  await page.getByRole('button', { name: 'Review & next', exact: true }).click();
+  const saved = await page.evaluate(() => localStorage.getItem('medcue-project-v1'));
+  await page.reload();
+  await expect(page.locator('.cue-number')).toHaveText('Cue 05');
+  await expect(page.locator('#progress')).toContainText('1 of 14');
+  await expect(page.locator('#restore-sample-audio')).toBeVisible();
+  await page.screenshot({ path: local ? 'artifacts/pages-local-recovery.png' : 'artifacts/pages-live-recovery.png', fullPage: true });
+  await page.getByRole('button', { name: 'Restore example audio', exact: true }).click();
+  await expect(page.locator('#audio-status')).toContainText('00:00:37');
+  assert.equal(await page.evaluate(() => localStorage.getItem('medcue-project-v1')), saved);
+  await expect(page.locator('.cue-number')).toHaveText('Cue 05');
   await page.getByRole('button', { name: 'Export SRT', exact: true }).click();
   const pending = page.waitForEvent('download'); await page.getByRole('button', { name: 'Download SRT', exact: true }).click();
   const exported = importSrt(await readFile(await (await pending).path(), 'utf8'));
@@ -65,7 +79,7 @@ try {
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
   await page.screenshot({ path: local ? 'artifacts/pages-local-mobile.png' : 'artifacts/pages-live-mobile.png', fullPage: true });
   assert.deepEqual(errors, []); assert.deepEqual(failures, []); assert.deepEqual(apis, []); assert.deepEqual(posts, []);
-  const result = { testedAt: new Date().toISOString(), base: local ? 'Local static server under /medcue/' : base, sampleReadyMs, measurement: 'Single automation observation, not a performance benchmark or human task time', imported: 14, reviewed: 1, advancedTo: 5, exportTextAndTimingPassed: true, localPlaybackPassed: true, noHorizontalOverflowAt390px: true, apiRequests: apis, postRequests: posts, pageErrors: errors, failedResponses: failures };
+  const result = { testedAt: new Date().toISOString(), base: local ? 'Local static server under /medcue/' : base, sampleReadyMs, measurement: 'Single automation observation, not a performance benchmark or human task time', imported: 14, reviewed: 1, advancedTo: 5, exportTextAndTimingPassed: true, localPlaybackPassed: true, undoReturnsToReviewedCue: true, refreshResumesSelectedCue: true, sampleAudioRestoresWithoutChangingProject: true, noHorizontalOverflowAt390px: true, apiRequests: apis, postRequests: posts, pageErrors: errors, failedResponses: failures };
   await writeFile(local ? 'artifacts/pages-local.json' : 'artifacts/pages-live.json', JSON.stringify(result, null, 2) + '\n');
   console.log(JSON.stringify(result, null, 2));
 } finally { await browser?.close(); if (server) await new Promise(r => server.close(r)); }

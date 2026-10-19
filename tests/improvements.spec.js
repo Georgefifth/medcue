@@ -51,6 +51,8 @@ test('review and next is one action, respects a search, and undo restores the de
   await expect(page.locator('.source-context')).toContainText('hypo glycemia');
   await page.getByRole('button', { name: 'Undo', exact: true }).click();
   await expect(page.locator('#progress')).toContainText('0 of 5');
+  await expect(page.locator('.cue-number')).toHaveText('Cue 01');
+  await page.locator('[data-cue="2"]').click();
   await page.locator('#search').fill('recording');
   await page.locator('#cue-text').focus();
   await page.locator('#cue-text').press('Control+Enter');
@@ -83,4 +85,43 @@ test('one-click real sample loads matching audio, fails recoverably and never as
   await expect(page.locator('#audio-status')).toContainText('00:00:37');
   expect(posts).toEqual([]);
   await page.screenshot({ path: 'artifacts/after-improvement.png', fullPage: true });
+});
+
+test('refresh resumes the selected cue and restores example audio without replacing work', async ({ page }) => {
+  await page.getByRole('button', { name: 'Try a real recording', exact: true }).click();
+  await expect(page.locator('#audio-status')).toContainText('00:00:37');
+  await page.locator('[data-cue="4"]').click();
+  await page.locator('#cue-text').fill('Editor correction kept across refresh.');
+  await page.getByRole('button', { name: 'Review & next', exact: true }).click();
+  const saved = await page.evaluate(() => localStorage.getItem('medcue-project-v1'));
+  await page.reload();
+  await expect(page.locator('.cue-number')).toHaveText('Cue 05');
+  await expect(page.locator('#progress')).toContainText('1 of 14');
+  const restore = page.getByRole('button', { name: 'Restore example audio', exact: true });
+  await expect(restore).toBeVisible();
+  await page.route('**/sample/antibiotics.mp3', r => r.fulfill({ status: 503, body: 'Unavailable' }));
+  await restore.click();
+  await expect(page.locator('#toast')).toContainText('Your review is kept');
+  expect(await page.evaluate(() => localStorage.getItem('medcue-project-v1'))).toBe(saved);
+  await page.unroute('**/sample/antibiotics.mp3');
+  await restore.click();
+  await expect(page.locator('#audio-status')).toContainText('00:00:37');
+  await expect(page.locator('#audio-recovery')).toBeHidden();
+  await expect(page.locator('.cue-number')).toHaveText('Cue 05');
+  expect(await page.evaluate(() => localStorage.getItem('medcue-project-v1'))).toBe(saved);
+  await page.locator('[data-cue="4"]').click();
+  await expect(page.locator('#cue-text')).toHaveValue('Editor correction kept across refresh.');
+  await expect(page.locator('.status-tag')).toHaveText('Reviewed');
+});
+test('an unrelated recording cannot be offered example audio based on its name alone', async ({ page }) => {
+  await page.getByRole('button', { name: 'Try a real recording', exact: true }).click();
+  await expect(page.locator('#cue-count')).toHaveText('14');
+  await page.evaluate(() => {
+    const project = JSON.parse(localStorage.getItem('medcue-project-v1'));
+    project.cues[3].original = 'Different original recording.';
+    localStorage.setItem('medcue-project-v1', JSON.stringify(project));
+  });
+  await page.reload();
+  await expect(page.locator('#audio-recovery')).toBeVisible();
+  await expect(page.locator('#restore-sample-audio')).toBeHidden();
 });

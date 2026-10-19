@@ -42,3 +42,7 @@ Record structural before/after checks and action counts, not agent execution tim
 ## Publication boundary
 
 The application directory has no dedicated Git repository; Git currently resolves to an unrelated home-directory repository. Do not publish or alter that parent repository. Initialize only this new project after inspecting its files. Check the intended GitHub repository before creating it. Use an explicit file allowlist for the initial commit; exclude `.env`, large evaluation media, local absolute-path screenshots/logs and unrelated work. Build only `dist/` for Pages. User explicitly requested repository creation and publication in this turn.
+
+## Subsequent submission pass
+
+The repository and Pages site are now configured; the initial publication boundary above is historical. Reuse them. The bounded continuation, current acceptance and submission materials are in [RELEASE-CANDIDATE.md](RELEASE-CANDIDATE.md) and [SUBMISSION.md](SUBMISSION.md).
