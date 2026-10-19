@@ -1,0 +1,535 @@
+1
+00:00:00,439 --> 00:00:03,919
+MedlinePlus presents antibiotics versus
+
+2
+00:00:03,929 --> 00:00:07,280
+bacteria fighting the resistance what if
+
+3
+00:00:07,290 --> 00:00:09,759
+we couldn't fight back tuberculosis
+
+4
+00:00:09,769 --> 00:00:13,789
+gonorrhea mersa these bedbugs are
+
+5
+00:00:13,799 --> 00:00:15,470
+considered by the National Institute of
+
+6
+00:00:15,480 --> 00:00:17,330
+Allergy and Infectious Diseases
+
+7
+00:00:17,340 --> 00:00:20,570
+or an i a I D to be some of the most
+
+8
+00:00:20,580 --> 00:00:21,980
+threatening organisms on the planet
+
+9
+00:00:21,990 --> 00:00:25,009
+today they have all joined the
+
+10
+00:00:25,019 --> 00:00:27,370
+resistance that's antimicrobial
+
+11
+00:00:27,380 --> 00:00:30,800
+resistance to be clear bacteria like
+
+12
+00:00:30,810 --> 00:00:32,569
+these are quickly gaining the ability to
+
+13
+00:00:32,579 --> 00:00:35,360
+floor our antibiotics leaving infections
+
+14
+00:00:35,370 --> 00:00:37,430
+much more difficult to treat and that's
+
+15
+00:00:37,440 --> 00:00:40,130
+a big problem the CDC estimates that
+
+16
+00:00:40,140 --> 00:00:42,110
+every year more than two million people
+
+17
+00:00:42,120 --> 00:00:44,180
+in the US gets sick from antimicrobial
+
+18
+00:00:44,190 --> 00:00:46,940
+resistant infections resulting in at
+
+19
+00:00:46,950 --> 00:00:50,090
+least 23,000 deaths the worry is that
+
+20
+00:00:50,100 --> 00:00:51,740
+other bacteria could join this
+
+21
+00:00:51,750 --> 00:00:53,330
+resistance faster than we can develop
+
+22
+00:00:53,340 --> 00:00:56,180
+solutions or that bacteria become
+
+23
+00:00:56,190 --> 00:00:58,130
+impervious to even more antibiotic
+
+24
+00:00:58,140 --> 00:01:00,380
+leading to essentially untreatable
+
+25
+00:01:00,390 --> 00:01:05,450
+diseases who are these bacteria many
+
+26
+00:01:05,460 --> 00:01:07,039
+different varieties of bacteria have
+
+27
+00:01:07,049 --> 00:01:09,620
+developed antimicrobial resistance but
+
+28
+00:01:09,630 --> 00:01:11,539
+some are more worrying than others
+
+29
+00:01:11,549 --> 00:01:14,780
+tuberculosis or TB is the number one
+
+30
+00:01:14,790 --> 00:01:16,370
+infectious disease killer in the world
+
+31
+00:01:16,380 --> 00:01:18,920
+takes over one and a half million lives
+
+32
+00:01:18,930 --> 00:01:22,010
+every year TB is difficult to treat and
+
+33
+00:01:22,020 --> 00:01:23,960
+some resistant strains need years of
+
+34
+00:01:23,970 --> 00:01:25,609
+daily treatment in multiple drugs
+
+35
+00:01:25,619 --> 00:01:28,070
+including months of painful injections
+
+36
+00:01:28,080 --> 00:01:29,810
+and serious side effects that can lead
+
+37
+00:01:29,820 --> 00:01:33,440
+patients death gonorrhea is worrisome
+
+38
+00:01:33,450 --> 00:01:35,240
+because strains have become resistant to
+
+39
+00:01:35,250 --> 00:01:38,510
+all but a few antibiotics this sexually
+
+40
+00:01:38,520 --> 00:01:40,490
+transmitted disease can share its
+
+41
+00:01:40,500 --> 00:01:42,370
+resistance genes between bacteria
+
+42
+00:01:42,380 --> 00:01:46,030
+increasing the speed and resistance
+
+43
+00:01:46,040 --> 00:01:48,530
+Staphylococcus aureus or staff is
+
+44
+00:01:48,540 --> 00:01:51,710
+everywhere on our personal items
+
+45
+00:01:51,720 --> 00:01:55,280
+our skin in our noses stuff is usually
+
+46
+00:01:55,290 --> 00:01:58,130
+not harmful but when it is it can be
+
+47
+00:01:58,140 --> 00:02:00,050
+difficult to treat especially in cases
+
+48
+00:02:00,060 --> 00:02:02,450
+of methicillin-resistant Staphylococcus
+
+49
+00:02:02,460 --> 00:02:05,630
+aureus or MRSA which is now carried by 2
+
+50
+00:02:05,640 --> 00:02:08,900
+percent of Americans these are just some
+
+51
+00:02:08,910 --> 00:02:10,340
+of the leading bacteria in the
+
+52
+00:02:10,350 --> 00:02:12,950
+resistance there are others and more are
+
+53
+00:02:12,960 --> 00:02:13,520
+coming
+
+54
+00:02:13,530 --> 00:02:16,820
+how does resistance occur resistance is
+
+55
+00:02:16,830 --> 00:02:18,860
+happening quickly because of overuse and
+
+56
+00:02:18,870 --> 00:02:21,770
+misuse of antibiotics over a long period
+
+57
+00:02:21,780 --> 00:02:23,870
+of time such as not completing
+
+58
+00:02:23,880 --> 00:02:26,030
+antibiotic courses as prescribed and
+
+59
+00:02:26,040 --> 00:02:28,580
+using antibiotics in agriculture to
+
+60
+00:02:28,590 --> 00:02:31,640
+promote growth in animals bacteria
+
+61
+00:02:31,650 --> 00:02:34,550
+multiplies so fast that even if we had
+
+62
+00:02:34,560 --> 00:02:37,190
+the perfect antibiotic resistance would
+
+63
+00:02:37,200 --> 00:02:40,370
+still occur and every time we use
+
+64
+00:02:40,380 --> 00:02:43,640
+antibiotics there is a chance that some
+
+65
+00:02:43,650 --> 00:02:45,890
+bacteria survive due to changes in their
+
+66
+00:02:45,900 --> 00:02:48,740
+DNA the DNA can code for survival
+
+67
+00:02:48,750 --> 00:02:51,440
+advantages such as changing the
+
+68
+00:02:51,450 --> 00:02:53,360
+bacterial cell surface preventing
+
+69
+00:02:53,370 --> 00:02:55,780
+antibiotics from attaching or getting in
+
+70
+00:02:55,790 --> 00:02:58,190
+making pumps that spit the antibiotics
+
+71
+00:02:58,200 --> 00:03:00,830
+out before they have a chance to work or
+
+72
+00:03:00,840 --> 00:03:02,930
+creating enzymes that neutralize the
+
+73
+00:03:02,940 --> 00:03:06,290
+antibiotics antibiotics will kill most
+
+74
+00:03:06,300 --> 00:03:08,690
+bacteria including the helpful bacteria
+
+75
+00:03:08,700 --> 00:03:11,120
+in our body but the bacteria with the
+
+76
+00:03:11,130 --> 00:03:14,390
+advantages can survive and reproduce the
+
+77
+00:03:14,400 --> 00:03:16,670
+resistant bacteria can pass the DNA
+
+78
+00:03:16,680 --> 00:03:18,920
+changes on to their offspring or
+
+79
+00:03:18,930 --> 00:03:21,199
+sometimes even to each other to generate
+
+80
+00:03:21,209 --> 00:03:23,330
+new strains of antibiotic resistant
+
+81
+00:03:23,340 --> 00:03:26,960
+bacteria what can you do to fight the
+
+82
+00:03:26,970 --> 00:03:29,990
+resistance using fewer antibiotics as a
+
+83
+00:03:30,000 --> 00:03:32,500
+society can help prevent resistance
+
+84
+00:03:32,510 --> 00:03:34,789
+saving antibiotics from when they are
+
+85
+00:03:34,799 --> 00:03:37,460
+most appropriate the first step is
+
+86
+00:03:37,470 --> 00:03:39,259
+preventing the need for antibiotics by
+
+87
+00:03:39,269 --> 00:03:42,110
+avoiding infections for example through
+
+88
+00:03:42,120 --> 00:03:45,470
+hand-washing immunizations and safe food
+
+89
+00:03:45,480 --> 00:03:46,680
+preparation
+
+90
+00:03:46,690 --> 00:03:49,140
+using antibiotics the right way also
+
+91
+00:03:49,150 --> 00:03:51,720
+helps such as taking prescribed courses
+
+92
+00:03:51,730 --> 00:03:53,700
+of antibiotics as directed to avoid
+
+93
+00:03:53,710 --> 00:03:55,950
+leaving bacteria behind and giving them
+
+94
+00:03:55,960 --> 00:03:58,440
+a chance to become resistant missed
+
+95
+00:03:58,450 --> 00:04:00,510
+doses of antibiotics may allow a better
+
+96
+00:04:00,520 --> 00:04:02,610
+environment for resistant bacteria to
+
+97
+00:04:02,620 --> 00:04:05,280
+multiply and cause a resistant infection
+
+98
+00:04:05,290 --> 00:04:07,980
+by matching specific antibiotics to the
+
+99
+00:04:07,990 --> 00:04:09,570
+bacteria that caused the infections
+
+100
+00:04:09,580 --> 00:04:11,640
+health care providers can fight
+
+101
+00:04:11,650 --> 00:04:14,070
+antimicrobial resistance by reducing the
+
+102
+00:04:14,080 --> 00:04:16,110
+number and strength of antibiotics
+
+103
+00:04:16,120 --> 00:04:18,780
+patients take care should be taking that
+
+104
+00:04:18,790 --> 00:04:21,120
+the infections are not already resistant
+
+105
+00:04:21,130 --> 00:04:24,870
+to the antibiotics also antibiotics
+
+106
+00:04:24,880 --> 00:04:26,880
+should not be given for viral infections
+
+107
+00:04:26,890 --> 00:04:29,820
+like cold or the flu because viruses are
+
+108
+00:04:29,830 --> 00:04:33,740
+not affected by antibiotics research at
+
+109
+00:04:33,750 --> 00:04:37,500
+NIAID NIAID
+
+110
+00:04:37,510 --> 00:04:39,420
+is researching ways to fight the
+
+111
+00:04:39,430 --> 00:04:42,600
+antimicrobial resistance problem many
+
+112
+00:04:42,610 --> 00:04:45,500
+avenues are being examined including
+
+113
+00:04:45,510 --> 00:04:48,150
+finding new antibiotics that expose
+
+114
+00:04:48,160 --> 00:04:51,200
+weaknesses in the bacterial life cycle
+
+115
+00:04:51,210 --> 00:04:53,310
+looking at ways to boost the immune
+
+116
+00:04:53,320 --> 00:04:56,300
+system to fight bacterial infections
+
+117
+00:04:56,310 --> 00:04:58,620
+creating bacterial communities that
+
+118
+00:04:58,630 --> 00:05:00,540
+drown out the effects of the infectious
+
+119
+00:05:00,550 --> 00:05:03,870
+bacteria using special viruses that
+
+120
+00:05:03,880 --> 00:05:07,190
+target and kill infectious bacteria an
+
+121
+00:05:07,200 --> 00:05:09,780
+improving diagnostic tests to better
+
+122
+00:05:09,790 --> 00:05:11,340
+target bacteria with the most
+
+123
+00:05:11,350 --> 00:05:14,520
+appropriate antibiotic with good public
+
+124
+00:05:14,530 --> 00:05:16,140
+health practices and cutting-edge
+
+125
+00:05:16,150 --> 00:05:19,140
+research we may be able to keep up with
+
+126
+00:05:19,150 --> 00:05:21,690
+the resistance and infectious diseases
+
+127
+00:05:21,700 --> 00:05:24,090
+in general but we all need to work
+
+128
+00:05:24,100 --> 00:05:27,270
+together to save one step ahead find out
+
+129
+00:05:27,280 --> 00:05:29,670
+specific up-to-date research and stories
+
+130
+00:05:29,680 --> 00:05:32,940
+from medlineplus.gov or search NIH
+
+131
+00:05:32,950 --> 00:05:35,850
+MEDLINE plus magazine and learn more
+
+132
+00:05:35,860 --> 00:05:42,290
+about NIAID research at NIAID nih gov
+
+133
+00:05:42,300 --> 00:05:44,580
+MedlinePlus is a trusted source from the
+
+134
+00:05:44,590 --> 00:05:48,180
+US National Library of Medicine

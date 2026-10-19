@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "frozenBeforeLiveRun": true,
+  "description": "Exploratory text-only stress test. All 24 cues are author-adapted or fictional. No audio, real ASR output or clinical expert labels. Synthetic timestamps of 15 seconds per cue.",
+  "glossary": "Metformin | meta formin\nHypoglycemia | hypo glycemia\nHemoglobin | haemoglobin\nHbA1c | HBA1C\nMilligram | miligram, miligrams\nSpirometry\nBronchodilator\nNephrologist",
+  "sources": {
+    "metformin": {
+      "url": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/metformin-first-choice",
+      "kind": "Published video transcript; adapted, not quoted verbatim"
+    },
+    "hypoglycemia": {
+      "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia",
+      "kind": "Patient education article; adapted"
+    },
+    "spirometry": {
+      "url": "https://www.nhlbi.nih.gov/health/asthma/diagnosis",
+      "kind": "Patient education article; adapted"
+    },
+    "haemoglobin": {
+      "url": "https://www.genomicseducation.hee.nhs.uk/glossary/haemoglobin/",
+      "kind": "NHS glossary; adapted; establishes valid UK spelling"
+    },
+    "kidney": {
+      "url": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/managing-diabetic-kidney-disease",
+      "kind": "Published video transcript; adapted"
+    },
+    "eilo": {
+      "url": "https://www.nationaljewish.org/education/health-information/multimedia/living-with-asthma/not-all-wheezing-is-asthma",
+      "kind": "Published video transcript; adapted; context-specific statement"
+    },
+    "inhaler": {
+      "url": "https://www.nhlbi.nih.gov/sites/default/files/media/docs/asthgdln_1.pdf",
+      "kind": "2007 teaching instructions, page 128; historical wording benchmark, not current medical guidance"
+    },
+    "fictional": {
+      "url": null,
+      "kind": "Author-created fictional teaching/label examples; no clinical source claim"
+    }
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "group": "spelling",
+      "text": "The educator describes meta formin as a longstanding diabetes medicine.",
+      "reference": "The educator describes metformin as a longstanding diabetes medicine.",
+      "span": "meta formin",
+      "source": "metformin",
+      "live": true,
+      "knownAlias": true
+    },
+    {
+      "id": "E02",
+      "group": "spelling",
+      "text": "The session calls a low glucose episode hypo glycemia.",
+      "reference": "The session calls a low glucose episode hypoglycemia.",
+      "span": "hypo glycemia",
+      "source": "hypoglycemia",
+      "knownAlias": true
+    },
+    {
+      "id": "E03",
+      "group": "spelling",
+      "text": "This fictional lesson introduces the unit miligram.",
+      "reference": "This fictional lesson introduces the unit milligram.",
+      "span": "miligram",
+      "source": "fictional",
+      "knownAlias": true
+    },
+    {
+      "id": "E04",
+      "group": "spelling",
+      "text": "Spirometery checks the speed and volume of exhaled air.",
+      "reference": "Spirometry checks the speed and volume of exhaled air.",
+      "span": "Spirometery",
+      "source": "spirometry",
+      "live": true,
+      "knownAlias": false
+    },
+    {
+      "id": "E05",
+      "group": "spelling",
+      "text": "The breathing test compares airflow before and after a bronchodialator.",
+      "reference": "The breathing test compares airflow before and after a bronchodilator.",
+      "span": "bronchodialator",
+      "source": "spirometry",
+      "knownAlias": false
+    },
+    {
+      "id": "E06",
+      "group": "spelling",
+      "text": "The kidney teaching session discusses referral to a nephrolgist.",
+      "reference": "The kidney teaching session discusses referral to a nephrologist.",
+      "span": "nephrolgist",
+      "source": "kidney",
+      "knownAlias": false
+    },
+    {
+      "id": "E07",
+      "group": "spelling",
+      "text": "The educator describes metphormin as a longstanding diabetes medicine.",
+      "reference": "The educator describes metformin as a longstanding diabetes medicine.",
+      "span": "metphormin",
+      "source": "metformin",
+      "knownAlias": false
+    },
+    {
+      "id": "E08",
+      "group": "spelling",
+      "text": "Hemogoblin is involved in oxygen transport within red blood cells.",
+      "reference": "Hemoglobin is involved in oxygen transport within red blood cells.",
+      "span": "Hemogoblin",
+      "source": "haemoglobin",
+      "knownAlias": false
+    },
+    {
+      "id": "C01",
+      "group": "clean",
+      "text": "Haemoglobin carries oxygen inside red blood cells.",
+      "source": "haemoglobin",
+      "live": true,
+      "note": "Valid UK spelling, not an error."
+    },
+    {
+      "id": "C02",
+      "group": "clean",
+      "text": "Hemoglobin carries oxygen inside red blood cells.",
+      "source": "haemoglobin"
+    },
+    {
+      "id": "C03",
+      "group": "clean",
+      "text": "The teaching slide uses the abbreviation HbA1c.",
+      "source": "fictional"
+    },
+    {
+      "id": "C04",
+      "group": "clean",
+      "text": "The fictional training label reads 0.5 mg, not 5 mg.",
+      "source": "fictional",
+      "live": true,
+      "note": "Deliberate comparison; numbers and negation are correct in the reference."
+    },
+    {
+      "id": "C05",
+      "group": "clean",
+      "text": "A reduced A1C level is discussed in the metformin lecture.",
+      "source": "metformin"
+    },
+    {
+      "id": "C06",
+      "group": "clean",
+      "text": "Spirometry checks the speed and volume of exhaled air.",
+      "source": "spirometry"
+    },
+    {
+      "id": "C07",
+      "group": "clean",
+      "text": "The glossary contains hypoglycemia and hyperglycemia as distinct terms.",
+      "source": "fictional",
+      "note": "Both spellings are valid; do not silently interchange them."
+    },
+    {
+      "id": "C08",
+      "group": "clean",
+      "text": "The fictional demonstration is not a treatment recommendation.",
+      "source": "fictional"
+    },
+    {
+      "id": "C09",
+      "group": "clean",
+      "text": "The educator describes Metformin as a longstanding diabetes medicine.",
+      "source": "metformin"
+    },
+    {
+      "id": "C10",
+      "group": "clean",
+      "text": "Early recognition of kidney disease can support a timely referral.",
+      "source": "kidney"
+    },
+    {
+      "id": "A01",
+      "group": "audio-dependent",
+      "text": "Medication is required for EILO in this discussion.",
+      "reference": "Medication is not required for EILO in this discussion.",
+      "span": "is required",
+      "source": "eilo",
+      "live": true,
+      "note": "Deleted negation. Original reference is withheld from the model, as in the app."
+    },
+    {
+      "id": "A02",
+      "group": "audio-dependent",
+      "text": "For this demonstration, count slowly to 100.",
+      "reference": "For this demonstration, count slowly to 10.",
+      "span": "100",
+      "source": "inhaler",
+      "note": "Number substitution; no audio is supplied."
+    },
+    {
+      "id": "A03",
+      "group": "audio-dependent",
+      "text": "The fictional training label reads 5 mg.",
+      "reference": "The fictional training label reads 0.5 mg.",
+      "span": "5 mg",
+      "source": "fictional",
+      "live": true,
+      "note": "Decimal deletion; both strings are superficially plausible without the source audio."
+    },
+    {
+      "id": "A04",
+      "group": "audio-dependent",
+      "text": "The glossary entry being read is hyperglycemia.",
+      "reference": "The glossary entry being read is hypoglycemia.",
+      "span": "hyperglycemia",
+      "source": "fictional",
+      "note": "Valid-term substitution; a text-only checker cannot know which was spoken."
+    },
+    {
+      "id": "A05",
+      "group": "audio-dependent",
+      "text": "The fictional label says 5.",
+      "reference": "The fictional label says 5 mg.",
+      "span": "5",
+      "source": "fictional",
+      "note": "Deleted unit; no reference audio is provided."
+    },
+    {
+      "id": "A06",
+      "group": "audio-dependent",
+      "text": "The presenter says this value should increase.",
+      "reference": "The presenter says this value should decrease.",
+      "span": "increase",
+      "source": "fictional",
+      "note": "Direction substitution with insufficient context."
+    }
+  ]
+}

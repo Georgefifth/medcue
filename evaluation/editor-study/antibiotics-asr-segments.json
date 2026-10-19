@@ -1,0 +1,806 @@
+[
+  {
+    "id": 1,
+    "from": 439,
+    "to": 3919,
+    "text": "MedlinePlus presents antibiotics versus"
+  },
+  {
+    "id": 2,
+    "from": 3929,
+    "to": 7280,
+    "text": "bacteria fighting the resistance what if"
+  },
+  {
+    "id": 3,
+    "from": 7290,
+    "to": 9759,
+    "text": "we couldn't fight back tuberculosis"
+  },
+  {
+    "id": 4,
+    "from": 9769,
+    "to": 13789,
+    "text": "gonorrhea mersa these bedbugs are"
+  },
+  {
+    "id": 5,
+    "from": 13799,
+    "to": 15470,
+    "text": "considered by the National Institute of"
+  },
+  {
+    "id": 6,
+    "from": 15480,
+    "to": 17330,
+    "text": "Allergy and Infectious Diseases"
+  },
+  {
+    "id": 7,
+    "from": 17340,
+    "to": 20570,
+    "text": "or an i a I D to be some of the most"
+  },
+  {
+    "id": 8,
+    "from": 20580,
+    "to": 21980,
+    "text": "threatening organisms on the planet"
+  },
+  {
+    "id": 9,
+    "from": 21990,
+    "to": 25009,
+    "text": "today they have all joined the"
+  },
+  {
+    "id": 10,
+    "from": 25019,
+    "to": 27370,
+    "text": "resistance that's antimicrobial"
+  },
+  {
+    "id": 11,
+    "from": 27380,
+    "to": 30800,
+    "text": "resistance to be clear bacteria like"
+  },
+  {
+    "id": 12,
+    "from": 30810,
+    "to": 32569,
+    "text": "these are quickly gaining the ability to"
+  },
+  {
+    "id": 13,
+    "from": 32579,
+    "to": 35360,
+    "text": "floor our antibiotics leaving infections"
+  },
+  {
+    "id": 14,
+    "from": 35370,
+    "to": 37430,
+    "text": "much more difficult to treat and that's"
+  },
+  {
+    "id": 15,
+    "from": 37440,
+    "to": 40130,
+    "text": "a big problem the CDC estimates that"
+  },
+  {
+    "id": 16,
+    "from": 40140,
+    "to": 42110,
+    "text": "every year more than two million people"
+  },
+  {
+    "id": 17,
+    "from": 42120,
+    "to": 44180,
+    "text": "in the US gets sick from antimicrobial"
+  },
+  {
+    "id": 18,
+    "from": 44190,
+    "to": 46940,
+    "text": "resistant infections resulting in at"
+  },
+  {
+    "id": 19,
+    "from": 46950,
+    "to": 50090,
+    "text": "least 23,000 deaths the worry is that"
+  },
+  {
+    "id": 20,
+    "from": 50100,
+    "to": 51740,
+    "text": "other bacteria could join this"
+  },
+  {
+    "id": 21,
+    "from": 51750,
+    "to": 53330,
+    "text": "resistance faster than we can develop"
+  },
+  {
+    "id": 22,
+    "from": 53340,
+    "to": 56180,
+    "text": "solutions or that bacteria become"
+  },
+  {
+    "id": 23,
+    "from": 56190,
+    "to": 58130,
+    "text": "impervious to even more antibiotic"
+  },
+  {
+    "id": 24,
+    "from": 58140,
+    "to": 60380,
+    "text": "leading to essentially untreatable"
+  },
+  {
+    "id": 25,
+    "from": 60390,
+    "to": 65450,
+    "text": "diseases who are these bacteria many"
+  },
+  {
+    "id": 26,
+    "from": 65460,
+    "to": 67039,
+    "text": "different varieties of bacteria have"
+  },
+  {
+    "id": 27,
+    "from": 67049,
+    "to": 69620,
+    "text": "developed antimicrobial resistance but"
+  },
+  {
+    "id": 28,
+    "from": 69630,
+    "to": 71539,
+    "text": "some are more worrying than others"
+  },
+  {
+    "id": 29,
+    "from": 71549,
+    "to": 74780,
+    "text": "tuberculosis or TB is the number one"
+  },
+  {
+    "id": 30,
+    "from": 74790,
+    "to": 76370,
+    "text": "infectious disease killer in the world"
+  },
+  {
+    "id": 31,
+    "from": 76380,
+    "to": 78920,
+    "text": "takes over one and a half million lives"
+  },
+  {
+    "id": 32,
+    "from": 78930,
+    "to": 82010,
+    "text": "every year TB is difficult to treat and"
+  },
+  {
+    "id": 33,
+    "from": 82020,
+    "to": 83960,
+    "text": "some resistant strains need years of"
+  },
+  {
+    "id": 34,
+    "from": 83970,
+    "to": 85609,
+    "text": "daily treatment in multiple drugs"
+  },
+  {
+    "id": 35,
+    "from": 85619,
+    "to": 88070,
+    "text": "including months of painful injections"
+  },
+  {
+    "id": 36,
+    "from": 88080,
+    "to": 89810,
+    "text": "and serious side effects that can lead"
+  },
+  {
+    "id": 37,
+    "from": 89820,
+    "to": 93440,
+    "text": "patients death gonorrhea is worrisome"
+  },
+  {
+    "id": 38,
+    "from": 93450,
+    "to": 95240,
+    "text": "because strains have become resistant to"
+  },
+  {
+    "id": 39,
+    "from": 95250,
+    "to": 98510,
+    "text": "all but a few antibiotics this sexually"
+  },
+  {
+    "id": 40,
+    "from": 98520,
+    "to": 100490,
+    "text": "transmitted disease can share its"
+  },
+  {
+    "id": 41,
+    "from": 100500,
+    "to": 102370,
+    "text": "resistance genes between bacteria"
+  },
+  {
+    "id": 42,
+    "from": 102380,
+    "to": 106030,
+    "text": "increasing the speed and resistance"
+  },
+  {
+    "id": 43,
+    "from": 106040,
+    "to": 108530,
+    "text": "Staphylococcus aureus or staff is"
+  },
+  {
+    "id": 44,
+    "from": 108540,
+    "to": 111710,
+    "text": "everywhere on our personal items"
+  },
+  {
+    "id": 45,
+    "from": 111720,
+    "to": 115280,
+    "text": "our skin in our noses stuff is usually"
+  },
+  {
+    "id": 46,
+    "from": 115290,
+    "to": 118130,
+    "text": "not harmful but when it is it can be"
+  },
+  {
+    "id": 47,
+    "from": 118140,
+    "to": 120050,
+    "text": "difficult to treat especially in cases"
+  },
+  {
+    "id": 48,
+    "from": 120060,
+    "to": 122450,
+    "text": "of methicillin-resistant Staphylococcus"
+  },
+  {
+    "id": 49,
+    "from": 122460,
+    "to": 125630,
+    "text": "aureus or MRSA which is now carried by 2"
+  },
+  {
+    "id": 50,
+    "from": 125640,
+    "to": 128900,
+    "text": "percent of Americans these are just some"
+  },
+  {
+    "id": 51,
+    "from": 128910,
+    "to": 130340,
+    "text": "of the leading bacteria in the"
+  },
+  {
+    "id": 52,
+    "from": 130350,
+    "to": 132950,
+    "text": "resistance there are others and more are"
+  },
+  {
+    "id": 53,
+    "from": 132960,
+    "to": 133520,
+    "text": "coming"
+  },
+  {
+    "id": 54,
+    "from": 133530,
+    "to": 136820,
+    "text": "how does resistance occur resistance is"
+  },
+  {
+    "id": 55,
+    "from": 136830,
+    "to": 138860,
+    "text": "happening quickly because of overuse and"
+  },
+  {
+    "id": 56,
+    "from": 138870,
+    "to": 141770,
+    "text": "misuse of antibiotics over a long period"
+  },
+  {
+    "id": 57,
+    "from": 141780,
+    "to": 143870,
+    "text": "of time such as not completing"
+  },
+  {
+    "id": 58,
+    "from": 143880,
+    "to": 146030,
+    "text": "antibiotic courses as prescribed and"
+  },
+  {
+    "id": 59,
+    "from": 146040,
+    "to": 148580,
+    "text": "using antibiotics in agriculture to"
+  },
+  {
+    "id": 60,
+    "from": 148590,
+    "to": 151640,
+    "text": "promote growth in animals bacteria"
+  },
+  {
+    "id": 61,
+    "from": 151650,
+    "to": 154550,
+    "text": "multiplies so fast that even if we had"
+  },
+  {
+    "id": 62,
+    "from": 154560,
+    "to": 157190,
+    "text": "the perfect antibiotic resistance would"
+  },
+  {
+    "id": 63,
+    "from": 157200,
+    "to": 160370,
+    "text": "still occur and every time we use"
+  },
+  {
+    "id": 64,
+    "from": 160380,
+    "to": 163640,
+    "text": "antibiotics there is a chance that some"
+  },
+  {
+    "id": 65,
+    "from": 163650,
+    "to": 165890,
+    "text": "bacteria survive due to changes in their"
+  },
+  {
+    "id": 66,
+    "from": 165900,
+    "to": 168740,
+    "text": "DNA the DNA can code for survival"
+  },
+  {
+    "id": 67,
+    "from": 168750,
+    "to": 171440,
+    "text": "advantages such as changing the"
+  },
+  {
+    "id": 68,
+    "from": 171450,
+    "to": 173360,
+    "text": "bacterial cell surface preventing"
+  },
+  {
+    "id": 69,
+    "from": 173370,
+    "to": 175780,
+    "text": "antibiotics from attaching or getting in"
+  },
+  {
+    "id": 70,
+    "from": 175790,
+    "to": 178190,
+    "text": "making pumps that spit the antibiotics"
+  },
+  {
+    "id": 71,
+    "from": 178200,
+    "to": 180830,
+    "text": "out before they have a chance to work or"
+  },
+  {
+    "id": 72,
+    "from": 180840,
+    "to": 182930,
+    "text": "creating enzymes that neutralize the"
+  },
+  {
+    "id": 73,
+    "from": 182940,
+    "to": 186290,
+    "text": "antibiotics antibiotics will kill most"
+  },
+  {
+    "id": 74,
+    "from": 186300,
+    "to": 188690,
+    "text": "bacteria including the helpful bacteria"
+  },
+  {
+    "id": 75,
+    "from": 188700,
+    "to": 191120,
+    "text": "in our body but the bacteria with the"
+  },
+  {
+    "id": 76,
+    "from": 191130,
+    "to": 194390,
+    "text": "advantages can survive and reproduce the"
+  },
+  {
+    "id": 77,
+    "from": 194400,
+    "to": 196670,
+    "text": "resistant bacteria can pass the DNA"
+  },
+  {
+    "id": 78,
+    "from": 196680,
+    "to": 198920,
+    "text": "changes on to their offspring or"
+  },
+  {
+    "id": 79,
+    "from": 198930,
+    "to": 201199,
+    "text": "sometimes even to each other to generate"
+  },
+  {
+    "id": 80,
+    "from": 201209,
+    "to": 203330,
+    "text": "new strains of antibiotic resistant"
+  },
+  {
+    "id": 81,
+    "from": 203340,
+    "to": 206960,
+    "text": "bacteria what can you do to fight the"
+  },
+  {
+    "id": 82,
+    "from": 206970,
+    "to": 209990,
+    "text": "resistance using fewer antibiotics as a"
+  },
+  {
+    "id": 83,
+    "from": 210000,
+    "to": 212500,
+    "text": "society can help prevent resistance"
+  },
+  {
+    "id": 84,
+    "from": 212510,
+    "to": 214789,
+    "text": "saving antibiotics from when they are"
+  },
+  {
+    "id": 85,
+    "from": 214799,
+    "to": 217460,
+    "text": "most appropriate the first step is"
+  },
+  {
+    "id": 86,
+    "from": 217470,
+    "to": 219259,
+    "text": "preventing the need for antibiotics by"
+  },
+  {
+    "id": 87,
+    "from": 219269,
+    "to": 222110,
+    "text": "avoiding infections for example through"
+  },
+  {
+    "id": 88,
+    "from": 222120,
+    "to": 225470,
+    "text": "hand-washing immunizations and safe food"
+  },
+  {
+    "id": 89,
+    "from": 225480,
+    "to": 226680,
+    "text": "preparation"
+  },
+  {
+    "id": 90,
+    "from": 226690,
+    "to": 229140,
+    "text": "using antibiotics the right way also"
+  },
+  {
+    "id": 91,
+    "from": 229150,
+    "to": 231720,
+    "text": "helps such as taking prescribed courses"
+  },
+  {
+    "id": 92,
+    "from": 231730,
+    "to": 233700,
+    "text": "of antibiotics as directed to avoid"
+  },
+  {
+    "id": 93,
+    "from": 233710,
+    "to": 235950,
+    "text": "leaving bacteria behind and giving them"
+  },
+  {
+    "id": 94,
+    "from": 235960,
+    "to": 238440,
+    "text": "a chance to become resistant missed"
+  },
+  {
+    "id": 95,
+    "from": 238450,
+    "to": 240510,
+    "text": "doses of antibiotics may allow a better"
+  },
+  {
+    "id": 96,
+    "from": 240520,
+    "to": 242610,
+    "text": "environment for resistant bacteria to"
+  },
+  {
+    "id": 97,
+    "from": 242620,
+    "to": 245280,
+    "text": "multiply and cause a resistant infection"
+  },
+  {
+    "id": 98,
+    "from": 245290,
+    "to": 247980,
+    "text": "by matching specific antibiotics to the"
+  },
+  {
+    "id": 99,
+    "from": 247990,
+    "to": 249570,
+    "text": "bacteria that caused the infections"
+  },
+  {
+    "id": 100,
+    "from": 249580,
+    "to": 251640,
+    "text": "health care providers can fight"
+  },
+  {
+    "id": 101,
+    "from": 251650,
+    "to": 254070,
+    "text": "antimicrobial resistance by reducing the"
+  },
+  {
+    "id": 102,
+    "from": 254080,
+    "to": 256110,
+    "text": "number and strength of antibiotics"
+  },
+  {
+    "id": 103,
+    "from": 256120,
+    "to": 258780,
+    "text": "patients take care should be taking that"
+  },
+  {
+    "id": 104,
+    "from": 258790,
+    "to": 261120,
+    "text": "the infections are not already resistant"
+  },
+  {
+    "id": 105,
+    "from": 261130,
+    "to": 264870,
+    "text": "to the antibiotics also antibiotics"
+  },
+  {
+    "id": 106,
+    "from": 264880,
+    "to": 266880,
+    "text": "should not be given for viral infections"
+  },
+  {
+    "id": 107,
+    "from": 266890,
+    "to": 269820,
+    "text": "like cold or the flu because viruses are"
+  },
+  {
+    "id": 108,
+    "from": 269830,
+    "to": 273740,
+    "text": "not affected by antibiotics research at"
+  },
+  {
+    "id": 109,
+    "from": 273750,
+    "to": 277500,
+    "text": "NIAID NIAID"
+  },
+  {
+    "id": 110,
+    "from": 277510,
+    "to": 279420,
+    "text": "is researching ways to fight the"
+  },
+  {
+    "id": 111,
+    "from": 279430,
+    "to": 282600,
+    "text": "antimicrobial resistance problem many"
+  },
+  {
+    "id": 112,
+    "from": 282610,
+    "to": 285500,
+    "text": "avenues are being examined including"
+  },
+  {
+    "id": 113,
+    "from": 285510,
+    "to": 288150,
+    "text": "finding new antibiotics that expose"
+  },
+  {
+    "id": 114,
+    "from": 288160,
+    "to": 291200,
+    "text": "weaknesses in the bacterial life cycle"
+  },
+  {
+    "id": 115,
+    "from": 291210,
+    "to": 293310,
+    "text": "looking at ways to boost the immune"
+  },
+  {
+    "id": 116,
+    "from": 293320,
+    "to": 296300,
+    "text": "system to fight bacterial infections"
+  },
+  {
+    "id": 117,
+    "from": 296310,
+    "to": 298620,
+    "text": "creating bacterial communities that"
+  },
+  {
+    "id": 118,
+    "from": 298630,
+    "to": 300540,
+    "text": "drown out the effects of the infectious"
+  },
+  {
+    "id": 119,
+    "from": 300550,
+    "to": 303870,
+    "text": "bacteria using special viruses that"
+  },
+  {
+    "id": 120,
+    "from": 303880,
+    "to": 307190,
+    "text": "target and kill infectious bacteria an"
+  },
+  {
+    "id": 121,
+    "from": 307200,
+    "to": 309780,
+    "text": "improving diagnostic tests to better"
+  },
+  {
+    "id": 122,
+    "from": 309790,
+    "to": 311340,
+    "text": "target bacteria with the most"
+  },
+  {
+    "id": 123,
+    "from": 311350,
+    "to": 314520,
+    "text": "appropriate antibiotic with good public"
+  },
+  {
+    "id": 124,
+    "from": 314530,
+    "to": 316140,
+    "text": "health practices and cutting-edge"
+  },
+  {
+    "id": 125,
+    "from": 316150,
+    "to": 319140,
+    "text": "research we may be able to keep up with"
+  },
+  {
+    "id": 126,
+    "from": 319150,
+    "to": 321690,
+    "text": "the resistance and infectious diseases"
+  },
+  {
+    "id": 127,
+    "from": 321700,
+    "to": 324090,
+    "text": "in general but we all need to work"
+  },
+  {
+    "id": 128,
+    "from": 324100,
+    "to": 327270,
+    "text": "together to save one step ahead find out"
+  },
+  {
+    "id": 129,
+    "from": 327280,
+    "to": 329670,
+    "text": "specific up-to-date research and stories"
+  },
+  {
+    "id": 130,
+    "from": 329680,
+    "to": 332940,
+    "text": "from medlineplus.gov or search NIH"
+  },
+  {
+    "id": 131,
+    "from": 332950,
+    "to": 335850,
+    "text": "MEDLINE plus magazine and learn more"
+  },
+  {
+    "id": 132,
+    "from": 335860,
+    "to": 342290,
+    "text": "about NIAID research at NIAID nih gov"
+  },
+  {
+    "id": 133,
+    "from": 342300,
+    "to": 344580,
+    "text": "MedlinePlus is a trusted source from the"
+  },
+  {
+    "id": 134,
+    "from": 344590,
+    "to": 348180,
+    "text": "US National Library of Medicine"
+  }
+]

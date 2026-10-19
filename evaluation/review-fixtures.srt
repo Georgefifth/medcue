@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:15,000
+The educator describes meta formin as a longstanding diabetes medicine.
+
+2
+00:00:15,000 --> 00:00:30,000
+The session calls a low glucose episode hypo glycemia.
+
+3
+00:00:30,000 --> 00:00:45,000
+This fictional lesson introduces the unit miligram.
+
+4
+00:00:45,000 --> 00:01:00,000
+Spirometery checks the speed and volume of exhaled air.
+
+5
+00:01:00,000 --> 00:01:15,000
+The breathing test compares airflow before and after a bronchodialator.
+
+6
+00:01:15,000 --> 00:01:30,000
+The kidney teaching session discusses referral to a nephrolgist.
+
+7
+00:01:30,000 --> 00:01:45,000
+The educator describes metphormin as a longstanding diabetes medicine.
+
+8
+00:01:45,000 --> 00:02:00,000
+Hemogoblin is involved in oxygen transport within red blood cells.
+
+9
+00:02:00,000 --> 00:02:15,000
+Haemoglobin carries oxygen inside red blood cells.
+
+10
+00:02:15,000 --> 00:02:30,000
+Hemoglobin carries oxygen inside red blood cells.
+
+11
+00:02:30,000 --> 00:02:45,000
+The teaching slide uses the abbreviation HbA1c.
+
+12
+00:02:45,000 --> 00:03:00,000
+The fictional training label reads 0.5 mg, not 5 mg.
+
+13
+00:03:00,000 --> 00:03:15,000
+A reduced A1C level is discussed in the metformin lecture.
+
+14
+00:03:15,000 --> 00:03:30,000
+Spirometry checks the speed and volume of exhaled air.
+
+15
+00:03:30,000 --> 00:03:45,000
+The glossary contains hypoglycemia and hyperglycemia as distinct terms.
+
+16
+00:03:45,000 --> 00:04:00,000
+The fictional demonstration is not a treatment recommendation.
+
+17
+00:04:00,000 --> 00:04:15,000
+The educator describes Metformin as a longstanding diabetes medicine.
+
+18
+00:04:15,000 --> 00:04:30,000
+Early recognition of kidney disease can support a timely referral.
+
+19
+00:04:30,000 --> 00:04:45,000
+Medication is required for EILO in this discussion.
+
+20
+00:04:45,000 --> 00:05:00,000
+For this demonstration, count slowly to 100.
+
+21
+00:05:00,000 --> 00:05:15,000
+The fictional training label reads 5 mg.
+
+22
+00:05:15,000 --> 00:05:30,000
+The glossary entry being read is hyperglycemia.
+
+23
+00:05:30,000 --> 00:05:45,000
+The fictional label says 5.
+
+24
+00:05:45,000 --> 00:06:00,000
+The presenter says this value should increase.

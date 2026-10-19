@@ -1,0 +1,56 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "startedAt": "2026-10-19T03:34:46.077Z",
+  "automaticRetries": false,
+  "referenceWithheld": true,
+  "audioSent": false,
+  "glossary": "Metformin | meta formin\nHypoglycemia | hypo glycemia\nHemoglobin\nHaemoglobin\nHbA1c\nMilligram | miligram, miligrams",
+  "results": [
+    {
+      "id": "term-original",
+      "cueId": 27,
+      "kind": "unaltered-publisher-caption",
+      "text": "Staphylococcus aureus, or Staph, is everywhere:",
+      "status": 200,
+      "elapsedMs": 996,
+      "suggestions": []
+    },
+    {
+      "id": "term-perturbed",
+      "cueId": 27,
+      "kind": "author-injected-spelling-error-not-ASR",
+      "text": "Staphylococus aureus, or Staph, is everywhere:",
+      "status": 200,
+      "elapsedMs": 982,
+      "suggestions": [
+        {
+          "quote": "Staphylococus",
+          "reason": "Check spelling of Staphylococcus"
+        }
+      ]
+    },
+    {
+      "id": "negation-original",
+      "cueId": 65,
+      "kind": "unaltered-publisher-caption",
+      "text": "Also, antibiotics should not be given for viral infections like colds or the flu,",
+      "status": 200,
+      "elapsedMs": 840,
+      "suggestions": []
+    },
+    {
+      "id": "negation-perturbed",
+      "cueId": 65,
+      "kind": "author-deleted-negation-not-ASR",
+      "text": "Also, antibiotics should be given for viral infections like colds or the flu,",
+      "status": 200,
+      "elapsedMs": 878,
+      "suggestions": [
+        {
+          "quote": "antibiotics should be given for viral infections",
+          "reason": "Medical inaccuracy: antibiotics are not used for viral infections."
+        }
+      ]
+    }
+  ]
+}

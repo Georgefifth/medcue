@@ -1,0 +1,64 @@
+{
+  "note": "Same-sample regression only, not a fresh validation set. No further model requests.",
+  "cleanCues": 10,
+  "flaggedCleanCues": 2,
+  "results": [
+    {
+      "id": "C01",
+      "signals": []
+    },
+    {
+      "id": "C02",
+      "signals": []
+    },
+    {
+      "id": "C03",
+      "signals": []
+    },
+    {
+      "id": "C04",
+      "signals": [
+        {
+          "type": "Numbers",
+          "title": "Verify the quantity and unit",
+          "detail": "Compare the quantity and unit with the recording. This signal does not mean the value is wrong."
+        },
+        {
+          "type": "Meaning",
+          "title": "Listen for the qualifier",
+          "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "signals": []
+    },
+    {
+      "id": "C06",
+      "signals": []
+    },
+    {
+      "id": "C07",
+      "signals": []
+    },
+    {
+      "id": "C08",
+      "signals": [
+        {
+          "type": "Meaning",
+          "title": "Listen for the qualifier",
+          "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "signals": []
+    },
+    {
+      "id": "C10",
+      "signals": []
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+[
+  {
+    "id": "antibiotics",
+    "cueCount": 134,
+    "roundtripPassed": true,
+    "attention": 14,
+    "signals": [
+      {
+        "id": 5,
+        "text": "considered by the National Institute of",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "threatening organisms on the planet",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "these are quickly gaining the ability to",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "text": "resistance faster than we can develop",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "text": "different varieties of bacteria have",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "text": "infectious disease killer in the world",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "text": "because strains have become resistant to",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "text": "not harmful but when it is it can be",
+        "signals": [
+          {
+            "type": "Meaning",
+            "title": "Listen for the qualifier",
+            "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "text": "of time such as not completing",
+        "signals": [
+          {
+            "type": "Meaning",
+            "title": "Listen for the qualifier",
+            "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "text": "of antibiotics as directed to avoid",
+        "signals": [
+          {
+            "type": "Meaning",
+            "title": "Listen for the qualifier",
+            "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "text": "bacteria that caused the infections",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "text": "the infections are not already resistant",
+        "signals": [
+          {
+            "type": "Meaning",
+            "title": "Listen for the qualifier",
+            "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "text": "should not be given for viral infections",
+        "signals": [
+          {
+            "type": "Meaning",
+            "title": "Listen for the qualifier",
+            "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+          }
+        ]
+      },
+      {
+        "id": 108,
+        "text": "not affected by antibiotics research at",
+        "signals": [
+          {
+            "type": "Meaning",
+            "title": "Listen for the qualifier",
+            "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+          }
+        ]
+      }
+    ],
+    "selectedExamples": [
+      {
+        "id": 4,
+        "text": "gonorrhea mersa these bedbugs are",
+        "signals": []
+      },
+      {
+        "id": 37,
+        "text": "patients death gonorrhea is worrisome",
+        "signals": []
+      }
+    ]
+  },
+  {
+    "id": "naloxone",
+    "cueCount": 123,
+    "roundtripPassed": true,
+    "attention": 1,
+    "signals": [
+      {
+        "id": 60,
+        "text": "that helps marathon runners get through",
+        "signals": [
+          {
+            "type": "Timing",
+            "title": "Fast reading pace",
+            "detail": "More than 22 characters per second. Check readability; timing is preserved in this MVP."
+          }
+        ]
+      }
+    ],
+    "selectedExamples": [
+      {
+        "id": 59,
+        "text": "orphans help produce the runner's high",
+        "signals": []
+      },
+      {
+        "id": 93,
+        "text": "the lock zone is safe and unlikely to",
+        "signals": []
+      }
+    ]
+  }
+]

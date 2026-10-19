@@ -1,0 +1,207 @@
+{
+  "fixtureVersion": 1,
+  "summary": {
+    "spellingCues": 8,
+    "spellingFlagged": 3,
+    "knownAliasCases": 3,
+    "unseenSpellingCases": 5,
+    "unseenSpellingFlagged": 0,
+    "cleanCues": 10,
+    "cleanCuesWithAttentionSignals": 3,
+    "audioDependentCues": 6,
+    "audioDependentCuesWithSignals": 1
+  },
+  "roundtripPassed": true,
+  "results": [
+    {
+      "id": "E01",
+      "group": "spelling",
+      "signals": [
+        {
+          "type": "Terms",
+          "title": "Check “meta formin”",
+          "detail": "Your glossary maps this spelling to “Metformin”. Listen before changing it.",
+          "replacement": "Metformin",
+          "match": "meta formin"
+        }
+      ],
+      "knownAlias": true
+    },
+    {
+      "id": "E02",
+      "group": "spelling",
+      "signals": [
+        {
+          "type": "Terms",
+          "title": "Check “hypo glycemia”",
+          "detail": "Your glossary maps this spelling to “Hypoglycemia”. Listen before changing it.",
+          "replacement": "Hypoglycemia",
+          "match": "hypo glycemia"
+        }
+      ],
+      "knownAlias": true
+    },
+    {
+      "id": "E03",
+      "group": "spelling",
+      "signals": [
+        {
+          "type": "Terms",
+          "title": "Check “miligram”",
+          "detail": "Your glossary maps this spelling to “Milligram”. Listen before changing it.",
+          "replacement": "Milligram",
+          "match": "miligram"
+        }
+      ],
+      "knownAlias": true
+    },
+    {
+      "id": "E04",
+      "group": "spelling",
+      "signals": [],
+      "knownAlias": false
+    },
+    {
+      "id": "E05",
+      "group": "spelling",
+      "signals": [],
+      "knownAlias": false
+    },
+    {
+      "id": "E06",
+      "group": "spelling",
+      "signals": [],
+      "knownAlias": false
+    },
+    {
+      "id": "E07",
+      "group": "spelling",
+      "signals": [],
+      "knownAlias": false
+    },
+    {
+      "id": "E08",
+      "group": "spelling",
+      "signals": [],
+      "knownAlias": false
+    },
+    {
+      "id": "C01",
+      "group": "clean",
+      "signals": [
+        {
+          "type": "Terms",
+          "title": "Check “haemoglobin”",
+          "detail": "Your glossary maps this spelling to “Hemoglobin”. Listen before changing it.",
+          "replacement": "Hemoglobin",
+          "match": "haemoglobin"
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "C03",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "C04",
+      "group": "clean",
+      "signals": [
+        {
+          "type": "Numbers",
+          "title": "Verify the quantity and unit",
+          "detail": "Compare the quantity and unit with the recording. This signal does not mean the value is wrong."
+        },
+        {
+          "type": "Meaning",
+          "title": "Listen for the qualifier",
+          "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "C06",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "C07",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "C08",
+      "group": "clean",
+      "signals": [
+        {
+          "type": "Meaning",
+          "title": "Listen for the qualifier",
+          "detail": "A negation or qualifier can change the meaning. Confirm it against the audio."
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "C10",
+      "group": "clean",
+      "signals": []
+    },
+    {
+      "id": "A01",
+      "group": "audio-dependent",
+      "signals": []
+    },
+    {
+      "id": "A02",
+      "group": "audio-dependent",
+      "signals": []
+    },
+    {
+      "id": "A03",
+      "group": "audio-dependent",
+      "signals": [
+        {
+          "type": "Numbers",
+          "title": "Verify the quantity and unit",
+          "detail": "Compare the quantity and unit with the recording. This signal does not mean the value is wrong."
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "group": "audio-dependent",
+      "signals": []
+    },
+    {
+      "id": "A05",
+      "group": "audio-dependent",
+      "signals": []
+    },
+    {
+      "id": "A06",
+      "group": "audio-dependent",
+      "signals": []
+    }
+  ],
+  "limitations": [
+    "Small convenience sample selected by the developer.",
+    "Labels and scoring were prepared by the developer, not independent clinical reviewers.",
+    "Timing is synthetic; no audio or actual ASR output.",
+    "Clean-cue attention signals are not necessarily error accusations.",
+    "No human time-savings measurement or Subtitle Edit/Descript usability comparison."
+  ]
+}

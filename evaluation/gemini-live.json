@@ -1,0 +1,71 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "requestedCaseIds": [
+    "E01",
+    "E04",
+    "C01",
+    "C04",
+    "A01",
+    "A03"
+  ],
+  "results": [
+    {
+      "id": "E01",
+      "httpStatus": 200,
+      "elapsedMs": 1003,
+      "suggestions": [
+        {
+          "quote": "meta formin",
+          "reason": "Verify spelling against glossary term Metformin"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "httpStatus": 200,
+      "elapsedMs": 831,
+      "suggestions": [
+        {
+          "quote": "Spirometery",
+          "reason": "spelling differs from glossary term Spirometry"
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "httpStatus": 200,
+      "elapsedMs": 774,
+      "suggestions": []
+    },
+    {
+      "id": "C04",
+      "httpStatus": 200,
+      "elapsedMs": 983,
+      "suggestions": [
+        {
+          "quote": "0.5 mg, not 5 mg.",
+          "reason": "Verify decimal and dosage distinction between 0.5 mg and 5 mg."
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "httpStatus": 200,
+      "elapsedMs": 1204,
+      "suggestions": []
+    },
+    {
+      "id": "A03",
+      "httpStatus": 200,
+      "elapsedMs": 1013,
+      "suggestions": [
+        {
+          "quote": "5 mg",
+          "reason": "Verify the spoken dose against context."
+        }
+      ]
+    }
+  ],
+  "automaticRetries": false,
+  "referenceWithheld": true
+}

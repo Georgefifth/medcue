@@ -1,0 +1,26 @@
+[
+  {
+    "id": "term-original",
+    "cueId": 27,
+    "kind": "unaltered-publisher-caption",
+    "text": "Staphylococcus aureus, or Staph, is everywhere:"
+  },
+  {
+    "id": "term-perturbed",
+    "cueId": 27,
+    "kind": "author-injected-spelling-error-not-ASR",
+    "text": "Staphylococus aureus, or Staph, is everywhere:"
+  },
+  {
+    "id": "negation-original",
+    "cueId": 65,
+    "kind": "unaltered-publisher-caption",
+    "text": "Also, antibiotics should not be given for viral infections like colds or the flu,"
+  },
+  {
+    "id": "negation-perturbed",
+    "cueId": 65,
+    "kind": "author-deleted-negation-not-ASR",
+    "text": "Also, antibiotics should be given for viral infections like colds or the flu,"
+  }
+]

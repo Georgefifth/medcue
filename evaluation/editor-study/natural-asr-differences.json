@@ -1,0 +1,575 @@
+{
+  "downloadedAt": "2026-10-19",
+  "origin": "YouTube automatic captions, downloaded with yt-dlp --write-auto-subs --skip-download --sub-langs en --sub-format vtt",
+  "normalization": "Lowercase, normalize apostrophes, strip punctuation. No number expansion or clinical normalization. Differences are lexical, not clinically labeled.",
+  "samples": [
+    {
+      "id": "antibiotics",
+      "video": "https://www.youtube.com/watch?v=oLPAodRN1b0",
+      "vttSha256": "7971c0b6a7824e53291a3379e8182a120571a0b8d3045bc0c0e9f6c78b77ecc1",
+      "asrCues": 134,
+      "referenceTokens": 783,
+      "asrTokens": 788,
+      "lexicalDifferenceGroups": 25,
+      "differences": [
+        {
+          "operation": "replace",
+          "reference": "mrsa",
+          "asr": "mersa",
+          "referenceRange": [
+            16,
+            17
+          ],
+          "asrRange": [
+            16,
+            17
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "bad bugs",
+          "asr": "bedbugs",
+          "referenceRange": [
+            18,
+            20
+          ],
+          "asrRange": [
+            18,
+            19
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "niaid",
+          "asr": "an i a i d",
+          "referenceRange": [
+            32,
+            33
+          ],
+          "asrRange": [
+            31,
+            36
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "thwart",
+          "asr": "floor",
+          "referenceRange": [
+            66,
+            67
+          ],
+          "asrRange": [
+            69,
+            70
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "get",
+          "asr": "gets",
+          "referenceRange": [
+            95,
+            96
+          ],
+          "asrRange": [
+            98,
+            99
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "antibiotics",
+          "asr": "antibiotic",
+          "referenceRange": [
+            132,
+            133
+          ],
+          "asrRange": [
+            135,
+            136
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "taking",
+          "asr": "takes",
+          "referenceRange": [
+            171,
+            172
+          ],
+          "asrRange": [
+            174,
+            175
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "with",
+          "asr": "in",
+          "referenceRange": [
+            195,
+            196
+          ],
+          "asrRange": [
+            198,
+            199
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "leave",
+          "asr": "lead",
+          "referenceRange": [
+            209,
+            210
+          ],
+          "asrRange": [
+            212,
+            213
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "deaf",
+          "asr": "death",
+          "referenceRange": [
+            211,
+            212
+          ],
+          "asrRange": [
+            214,
+            215
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "of",
+          "asr": "and",
+          "referenceRange": [
+            240,
+            241
+          ],
+          "asrRange": [
+            243,
+            244
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "staph",
+          "asr": "staff",
+          "referenceRange": [
+            245,
+            246
+          ],
+          "asrRange": [
+            248,
+            249
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "staph",
+          "asr": "stuff",
+          "referenceRange": [
+            257,
+            258
+          ],
+          "asrRange": [
+            260,
+            261
+          ]
+        },
+        {
+          "operation": "insert",
+          "reference": "",
+          "asr": "percent",
+          "referenceRange": [
+            288,
+            288
+          ],
+          "asrRange": [
+            291,
+            292
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "multiply",
+          "asr": "multiplies",
+          "referenceRange": [
+            348,
+            349
+          ],
+          "asrRange": [
+            352,
+            353
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "for",
+          "asr": "from",
+          "referenceRange": [
+            493,
+            494
+          ],
+          "asrRange": [
+            497,
+            498
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "cause",
+          "asr": "caused",
+          "referenceRange": [
+            577,
+            578
+          ],
+          "asrRange": [
+            581,
+            582
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "healthcare",
+          "asr": "health care",
+          "referenceRange": [
+            580,
+            581
+          ],
+          "asrRange": [
+            584,
+            586
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "taken",
+          "asr": "taking",
+          "referenceRange": [
+            599,
+            600
+          ],
+          "asrRange": [
+            604,
+            605
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "colds",
+          "asr": "cold",
+          "referenceRange": [
+            620,
+            621
+          ],
+          "asrRange": [
+            625,
+            626
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "and",
+          "asr": "an",
+          "referenceRange": [
+            694,
+            695
+          ],
+          "asrRange": [
+            699,
+            700
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "antibiotics",
+          "asr": "antibiotic",
+          "referenceRange": [
+            706,
+            707
+          ],
+          "asrRange": [
+            711,
+            712
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "stay",
+          "asr": "save",
+          "referenceRange": [
+            739,
+            740
+          ],
+          "asrRange": [
+            744,
+            745
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "medlineplus",
+          "asr": "medline plus",
+          "referenceRange": [
+            758,
+            759
+          ],
+          "asrRange": [
+            763,
+            765
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "u s",
+          "asr": "us",
+          "referenceRange": [
+            777,
+            779
+          ],
+          "asrRange": [
+            783,
+            784
+          ]
+        }
+      ]
+    },
+    {
+      "id": "naloxone",
+      "video": "https://www.youtube.com/watch?v=cssRZEI9ujY",
+      "vttSha256": "dcffbfa7eb70aed96138c919e3cf0574207bf3257d39cd63a8d23265897a83d1",
+      "asrCues": 123,
+      "referenceTokens": 752,
+      "asrTokens": 764,
+      "lexicalDifferenceGroups": 17,
+      "differences": [
+        {
+          "operation": "insert",
+          "reference": "",
+          "asr": "percent",
+          "referenceRange": [
+            78,
+            78
+          ],
+          "asrRange": [
+            78,
+            79
+          ]
+        },
+        {
+          "operation": "delete",
+          "reference": "immediately",
+          "asr": "",
+          "referenceRange": [
+            181,
+            182
+          ],
+          "asrRange": [
+            182,
+            182
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "arrive",
+          "asr": "arrived",
+          "referenceRange": [
+            251,
+            252
+          ],
+          "asrRange": [
+            251,
+            252
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "opioids",
+          "asr": "opioid",
+          "referenceRange": [
+            336,
+            337
+          ],
+          "asrRange": [
+            336,
+            337
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "endorphins",
+          "asr": "and orphans",
+          "referenceRange": [
+            372,
+            373
+          ],
+          "asrRange": [
+            372,
+            374
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "they are",
+          "asr": "they're",
+          "referenceRange": [
+            401,
+            403
+          ],
+          "asrRange": [
+            402,
+            403
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "brainstem",
+          "asr": "brain stem",
+          "referenceRange": [
+            486,
+            487
+          ],
+          "asrRange": [
+            486,
+            488
+          ]
+        },
+        {
+          "operation": "insert",
+          "reference": "",
+          "asr": "to",
+          "referenceRange": [
+            551,
+            551
+          ],
+          "asrRange": [
+            552,
+            553
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "their",
+          "asr": "the",
+          "referenceRange": [
+            569,
+            570
+          ],
+          "asrRange": [
+            571,
+            572
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "naloxone",
+          "asr": "the lock zone",
+          "referenceRange": [
+            575,
+            576
+          ],
+          "asrRange": [
+            577,
+            580
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "26 500",
+          "asr": "twenty six thousand five hundred",
+          "referenceRange": [
+            593,
+            595
+          ],
+          "asrRange": [
+            597,
+            602
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "laypersons",
+          "asr": "lay persons",
+          "referenceRange": [
+            604,
+            605
+          ],
+          "asrRange": [
+            611,
+            613
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "naloxone",
+          "asr": "the lock zone",
+          "referenceRange": [
+            606,
+            607
+          ],
+          "asrRange": [
+            614,
+            617
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "the",
+          "asr": "a",
+          "referenceRange": [
+            679,
+            680
+          ],
+          "asrRange": [
+            689,
+            690
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "nida's",
+          "asr": "knight as",
+          "referenceRange": [
+            707,
+            708
+          ],
+          "asrRange": [
+            717,
+            719
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "drugabuse",
+          "asr": "drug abuse",
+          "referenceRange": [
+            710,
+            711
+          ],
+          "asrRange": [
+            721,
+            723
+          ]
+        },
+        {
+          "operation": "replace",
+          "reference": "was",
+          "asr": "is",
+          "referenceRange": [
+            736,
+            737
+          ],
+          "asrRange": [
+            748,
+            749
+          ]
+        }
+      ]
+    }
+  ]
+}

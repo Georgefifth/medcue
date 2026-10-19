@@ -1,0 +1,88 @@
+{
+  "sourceCaptionType": "Publisher-provided; not established as automatic ASR",
+  "preprocessing": [
+    {
+      "file": "naloxone.srt",
+      "originalRejected": true,
+      "change": "Removed only empty final cue 91 (336000–339633 ms) from a separate review copy. Original retained.",
+      "output": "naloxone-review.srt"
+    }
+  ],
+  "samples": [
+    {
+      "id": "naloxone",
+      "captionFile": "naloxone-review.srt",
+      "cueCount": 90,
+      "durationSeconds": 339.696,
+      "roundtripPassed": true,
+      "cuesWithAttentionSignals": 1,
+      "signalsByType": {
+        "Numbers": 1
+      },
+      "findings": [
+        {
+          "cueId": 12,
+          "types": [
+            "Numbers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antibiotics",
+      "captionFile": "antibiotics.srt",
+      "cueCount": 81,
+      "durationSeconds": 348.048,
+      "roundtripPassed": true,
+      "cuesWithAttentionSignals": 7,
+      "signalsByType": {
+        "Meaning": 6,
+        "Numbers": 1
+      },
+      "findings": [
+        {
+          "cueId": 29,
+          "types": [
+            "Meaning"
+          ]
+        },
+        {
+          "cueId": 31,
+          "types": [
+            "Numbers"
+          ]
+        },
+        {
+          "cueId": 36,
+          "types": [
+            "Meaning"
+          ]
+        },
+        {
+          "cueId": 58,
+          "types": [
+            "Meaning"
+          ]
+        },
+        {
+          "cueId": 64,
+          "types": [
+            "Meaning"
+          ]
+        },
+        {
+          "cueId": 65,
+          "types": [
+            "Meaning"
+          ]
+        },
+        {
+          "cueId": 66,
+          "types": [
+            "Meaning"
+          ]
+        }
+      ]
+    }
+  ]
+}

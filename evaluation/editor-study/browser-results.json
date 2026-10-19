@@ -1,0 +1,51 @@
+{
+  "testedAt": "2026-10-19T03:50:53.718Z",
+  "isolatedBrowserContext": true,
+  "naturalAsr": true,
+  "results": [
+    {
+      "id": "naloxone",
+      "cueCount": 123,
+      "playbackCue": 59,
+      "playback": [
+        {
+          "speed": 0.75,
+          "seekSeconds": 162.03474,
+          "stopSeconds": 166.150707
+        },
+        {
+          "speed": 1.25,
+          "seekSeconds": 162.046917,
+          "stopSeconds": 166.157371
+        }
+      ],
+      "editedAndUndone": true,
+      "reviewed": 1,
+      "exportPreservedAllTextAndTimestamps": true,
+      "pageErrors": [],
+      "postRequests": []
+    },
+    {
+      "id": "antibiotics",
+      "cueCount": 134,
+      "playbackCue": 4,
+      "playback": [
+        {
+          "speed": 0.75,
+          "seekSeconds": 8.775723,
+          "stopSeconds": 14.298354
+        },
+        {
+          "speed": 1.25,
+          "seekSeconds": 8.79422,
+          "stopSeconds": 14.289862
+        }
+      ],
+      "editedAndUndone": true,
+      "reviewed": 1,
+      "exportPreservedAllTextAndTimestamps": true,
+      "pageErrors": [],
+      "postRequests": []
+    }
+  ]
+}

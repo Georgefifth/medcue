@@ -1,0 +1,63 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "startedAt": "2026-10-19T03:48:29.435Z",
+  "automaticRetries": false,
+  "referenceWithheld": true,
+  "audioSent": false,
+  "glossary": "Metformin | meta formin\nHypoglycemia | hypo glycemia\nHemoglobin\nHaemoglobin\nHbA1c\nMilligram | miligram, miligrams\nNaloxone\nEndorphins\nMRSA\nStaphylococcus aureus\nNIAID",
+  "selection": "Four developer-selected natural ASR discrepancies; not blinded or representative",
+  "results": [
+    {
+      "sample": "antibiotics",
+      "cueId": 4,
+      "text": "gonorrhea mersa these bedbugs are",
+      "status": 200,
+      "elapsedMs": 992,
+      "suggestions": [
+        {
+          "quote": "mersa",
+          "reason": "possible mishearing of medical term MRSA"
+        }
+      ]
+    },
+    {
+      "sample": "antibiotics",
+      "cueId": 37,
+      "text": "patients death gonorrhea is worrisome",
+      "status": 200,
+      "elapsedMs": 1172,
+      "suggestions": [
+        {
+          "quote": "gonorrhea",
+          "reason": "Check for similar-sounding medical terminology"
+        }
+      ]
+    },
+    {
+      "sample": "naloxone",
+      "cueId": 59,
+      "text": "orphans help produce the runner's high",
+      "status": 200,
+      "elapsedMs": 908,
+      "suggestions": [
+        {
+          "quote": "orphans",
+          "reason": "Check for endorphins based on glossary and context."
+        }
+      ]
+    },
+    {
+      "sample": "naloxone",
+      "cueId": 93,
+      "text": "the lock zone is safe and unlikely to",
+      "status": 200,
+      "elapsedMs": 1056,
+      "suggestions": [
+        {
+          "quote": "lock zone",
+          "reason": "possible mishearing of medical terminology or drug name"
+        }
+      ]
+    }
+  ]
+}

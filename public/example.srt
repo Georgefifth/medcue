@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+Today we will discuss meta formin in this fictional teaching example.
+
+2
+00:00:05,000 --> 00:00:10,000
+The example label reads 500 mg. Check the number against the recording.
+
+3
+00:00:10,000 --> 00:00:15,000
+Listen carefully to the term hypo glycemia.
+
+4
+00:00:15,000 --> 00:00:20,000
+The speaker says this is not an individual treatment recommendation.
+
+5
+00:00:20,000 --> 00:00:25,000
+Read the original source and confirm every change before publishing.

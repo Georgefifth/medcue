@@ -1,0 +1,46 @@
+[
+  {
+    "id": "naloxone",
+    "page": "https://medlineplus.gov/medlineplus-videos/how-naloxone-saves-lives-in-opioid-overdose/",
+    "attribution": "Source: MedlinePlus, National Library of Medicine.",
+    "licensePage": "https://medlineplus.gov/about/using/usingcontent/",
+    "files": [
+      {
+        "kind": "video",
+        "url": "https://medlineplus.gov/videofiles/en/how-naloxone-saves-lives-in-opioid-overdose.mp4",
+        "path": "naloxone.mp4",
+        "bytes": 53820567,
+        "sha256": "dbb67f53ae176dd8eb92993c9b46c79be9a494437f8ef451b6b2be83cf7b1ec3"
+      },
+      {
+        "kind": "captions",
+        "url": "https://medlineplus.gov/videofiles/en/how-naloxone-saves-lives-in-opioid-overdose_captions.srt",
+        "path": "naloxone.srt",
+        "bytes": 8204,
+        "sha256": "8cd19a17ea3b47eec25d3ddf5bfe613389e7bb8673fe9960006ae2b01180b04b"
+      }
+    ]
+  },
+  {
+    "id": "antibiotics",
+    "page": "https://medlineplus.gov/medlineplus-videos/antibiotics-vs-bacteria-fighting-the-resistance/",
+    "attribution": "Source: MedlinePlus, National Library of Medicine.",
+    "licensePage": "https://medlineplus.gov/about/using/usingcontent/",
+    "files": [
+      {
+        "kind": "video",
+        "url": "https://medlineplus.gov/videofiles/en/antibiotics-vs-bacteria-fighting-the-resistance.mp4",
+        "path": "antibiotics.mp4",
+        "bytes": 39847297,
+        "sha256": "08b0cbfdc2d7a6aa12a75a5763a96f28dd9058dfe96321ee71b5b051821aa67a"
+      },
+      {
+        "kind": "captions",
+        "url": "https://medlineplus.gov/videofiles/en/antibiotics-vs-bacteria-fighting-the-resistance_captions.srt",
+        "path": "antibiotics.srt",
+        "bytes": 8116,
+        "sha256": "80ef25ca5a5cb9359c0c74a64fd0f792d64bc6e36b687af07458cec9f56597eb"
+      }
+    ]
+  }
+]
