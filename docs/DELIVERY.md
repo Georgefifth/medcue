@@ -2,7 +2,7 @@
 
 ## Completed scope
 
-Five-alternative competition audit and real user-feedback review are in `COMPETITION.md`; bounded design/priorities and acceptance conditions are in `IMPROVEMENT-PLAN.md`. No accounts, paid trials, participant recruitment or new model calls were used for this iteration.
+Five-alternative competition audit and real user-feedback review are in [COMPETITION.md](COMPETITION.md); bounded design/priorities and acceptance conditions are in [IMPROVEMENT-PLAN.md](IMPROVEMENT-PLAN.md). No accounts, paid trials, participant recruitment or new model calls were used for this iteration.
 
 | Change | Before | After | Verified boundary |
 |---|---|---|---|
@@ -44,3 +44,5 @@ GitHub Pages cannot run the Node API or protect a key placed in browser JavaScri
 This is not a comprehensive subtitle editor or a validated medical-correction system. Prior natural-ASR testing found both relevant AI leads and a misplaced warning on a correct term. We did not train aliases on those observed errors or repeat inference to manufacture a better result. Human time savings, retention, market demand and switching preference remain unverified. Existing tools retain substantial advantages in retiming, formats, authoring and collaboration.
 
 Sanitized before/after and hosted observations are recorded in `verification.json`. Screenshots are generated locally under `artifacts/`; the public source includes the regression and hosted-smoke scripts.
+
+Final compatibility refinement: replay uses Shift+Space rather than the Windows-reserved Alt+Space. The browser test verifies playback from the textarea without changing text or focus. The real recording example can also be explicitly reloaded from the sidebar after a refresh; replacement still asks for confirmation.

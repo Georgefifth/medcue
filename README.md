@@ -8,14 +8,14 @@ A local-first desk for reviewing existing English education subtitles against a 
 
 The GitHub Pages edition runs editing, glossary rules, audio playback, project recovery and SRT export in your browser. It has **no AI backend**, collects no API key, and makes no inference requests. Audio is not uploaded. GitHub still serves the site and may log normal visit metadata; this is not a claim of anonymous hosting.
 
-Choose **Try a real recording** to load a 37.5-second public NLM audio excerpt and its actual automatic captions together. The captions contain real transcription differences; nothing is automatically corrected. Attribution and source permission are in [the sample notice](public/sample/ATTRIBUTION.md). The separate **Explore a sample review** option contains fictional text without audio.
+Choose **Try a real recording** to load a 37.5-second public NLM audio excerpt and its actual automatic captions together. The captions contain real transcription differences; nothing is automatically corrected. Attribution and source permission are in [the sample notice](public/sample/ATTRIBUTION.md). The separate **Explore a sample review** option contains fictional text without audio. **Recording example** in the sidebar can load the real example again after a refresh; it asks before replacing your current review, so save your edits first.
 
 ## Review workflow
 
 1. **Open subtitles** with UTF-8 SRT, then **Attach audio** with matching MP3, WAV, M4A or OGG. Codec support varies by browser. An empty-cue preview lists omissions for explicit confirmation; Cancel keeps the current project. Malformed text/timing still rejects atomically.
 2. Select a cue. Read the original and neighboring original subtitles; replay starts one second before and stops half a second after the cue, bounded by the recording. Use 0.75×, 1× or 1.25× playback.
 3. Edit the final subtitle. The original remains unchanged. Signals are reasons to listen, not proof of errors.
-4. **Review & next** (Ctrl/Cmd+Enter) records the decision and advances to the next matching unreviewed cue, respecting the current search/filter and wrapping. **Mark reviewed / Reopen cue** changes a decision without moving. **Undo** restores edits or review decisions. Alt+Space replays while editing.
+4. **Review & next** (Ctrl/Cmd+Enter) records the decision and advances to the next matching unreviewed cue, respecting the current search/filter and wrapping. **Mark reviewed / Reopen cue** changes a decision without moving. **Undo** restores edits or review decisions. Shift+Space replays while editing.
 5. **Export SRT** includes every imported nonempty cue, with a pending count. Original timestamps/order are preserved and sequence numbers normalized. Empty edited text or internal blank lines block export.
 6. **Save project** downloads originals, edits, glossary, decisions and audit entries. **Open project** restores them. Audio must be reattached after reload or restore.
 

@@ -70,8 +70,17 @@ test('one-click real sample loads matching audio, fails recoverably and never as
   await expect(page.locator('#cue-count')).toHaveText('14');
   await expect(page.locator('#audio-status')).toContainText('00:00:37');
   await expect(page.getByRole('button', { name: 'Replay selected cue', exact: true })).toBeEnabled();
-  await page.getByRole('button', { name: 'Replay selected cue', exact: true }).click();
+  const beforePlayback = await page.locator('#cue-text').inputValue();
+  await page.locator('#cue-text').focus();
+  await page.locator('#cue-text').press('Shift+Space');
   await expect(page.locator('#audio-status')).toContainText('Playing');
+  await expect(page.locator('#cue-text')).toHaveValue(beforePlayback);
+  await expect(page.locator('#cue-text')).toBeFocused();
+  await page.reload();
+  await expect(page.locator('#audio-title')).toHaveText('Attach audio to listen');
+  page.once('dialog', d => d.accept());
+  await page.getByRole('button', { name: 'Recording example', exact: true }).click();
+  await expect(page.locator('#audio-status')).toContainText('00:00:37');
   expect(posts).toEqual([]);
   await page.screenshot({ path: 'artifacts/after-improvement.png', fullPage: true });
 });

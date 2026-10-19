@@ -4,10 +4,10 @@
 A teaching assistant or small course-production team already has audio and machine-generated English SRT. They need to locate likely terminology mistakes and verify sensitive quantities without checking a separate spreadsheet while repeatedly scrubbing the audio.
 
 ## Core workflow
-1. Open a synthetic example or import UTF-8 SRT and a supported audio file.
+1. Open a real recording example, a separate fictional text fixture, or import UTF-8 SRT and matching audio. Empty entries require explicit preview/omission confirmation; malformed content remains blocked.
 2. Optionally customize a glossary using `Canonical term | alias, another alias`.
 3. Filter review signals, select a cue, replay with context and edit its text.
-4. Explicitly mark the cue reviewed. Editing or changing evidence invalidates review.
+4. Explicitly mark the cue reviewed, or use Review & next (Ctrl/Cmd+Enter). Editing or changing evidence invalidates review. Shift+Space replays without leaving the text editor.
 5. Download the complete SRT, including unreviewed cues, with an explicit pending count. Download a JSON project for portable recovery.
 
 ## Signals and AI
@@ -16,8 +16,10 @@ Glossary alias matches suggest the canonical spelling. Quantity/unit and negatio
 ## Deployment
 Cloud API is the default testing and demo mode. A small Node server serves the built app and API; a container configuration allows deployment independently of the developer computer. Ollama remains an optional self-hosted mode. Display the configured processing destination before AI use. Keep API secrets out of browser code. Limit review input, output tokens, concurrent calls and per-instance hourly calls. Actual hosting/provider costs require a separate budget.
 
+The separate GitHub Pages edition provides local editing/playback/export with AI explicitly disabled. Pages cannot execute the Node API or protect provider keys in browser JavaScript.
+
 ## Acceptance
-- Imports preserve multiline text, cue count and millisecond timestamps. Reject invalid/empty/mixed malformed cues atomically.
+- Imports preserve multiline text, cue count and millisecond timestamps. Reject malformed content atomically. Empty entries may be omitted only through an explicit preview, with an audit record and unchanged nonempty cues; cancel preserves the draft. The strict parser and saved-project validator still reject empty cue text.
 - Playback starts with one second of context, stops after the selected cue and reports missing/invalid media.
 - Original text remains visible; edits and review states survive browser refresh when storage is available; audio is not persisted.
 - A project file restores original/current text, glossary and review decisions with input validation.

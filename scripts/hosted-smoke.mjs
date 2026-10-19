@@ -42,7 +42,9 @@ try {
   await expect(page.locator('#audio-status')).toContainText('00:00:37', { timeout: 30000 });
   const sampleReadyMs = Date.now() - start;
   await page.locator('[data-cue="4"]').click();
-  await page.getByRole('button', { name: 'Replay selected cue', exact: true }).click();
+  const beforePlayback = await page.locator('#cue-text').inputValue();
+  await page.locator('#cue-text').press('Shift+Space');
+  await expect(page.locator('#cue-text')).toHaveValue(beforePlayback);
   await expect(page.locator('#audio-status')).toContainText('Playing');
   await expect(page.locator('#audio-status')).toContainText('Paused', { timeout: 10000 });
   await page.locator('#cue-text').fill('gonorrhea MRSA these bedbugs are');

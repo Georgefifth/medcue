@@ -39,3 +39,5 @@ Scope: existing English subtitle review against an education recording. Public-s
 **P2:** generic slogan, repeated card borders and tiny low-priority labels obscure the task. Replace with recording-first hierarchy, larger self-hosted text, quieter evidence rail and useful keyboard hints. No animation, charts, accounts, timing editor or new AI scope.
 
 See `IMPROVEMENT-PLAN.md` for per-change acceptance conditions. Human time savings, medical correctness, market demand, retention and willingness to switch are still unverified. Existing tools remain the sensible default for comprehensive subtitle authoring.
+
+Shortcut compatibility check: [Microsoft documents Alt+Space as a system window-menu shortcut](https://support.microsoft.com/en-au/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec). The final replay binding uses Shift+Space, also documented in the observed subtitle-editor.org interface. Browser tests verify it does not insert a space while editing; OS/input-method combinations still vary.
