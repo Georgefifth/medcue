@@ -15,24 +15,29 @@
     "rawNlmSrtImport": "explicit preview and omission audit; 90 nonempty cues preserved",
     "adjacentOriginalsVisible": true,
     "replayShortcut": "Shift+Space; tested with textarea focus and no text insertion",
-    "sampleCanBeReloadedAfterRefresh": "Explicit sidebar action; replacement requires confirmation"
+    "sampleCanBeReloadedAfterRefresh": "Restore example audio validates every original and timestamp, retaining edits, decisions, audit and selected cue; explicit sidebar replacement still confirms.",
+    "refreshResumesSelectedCue": true,
+    "undoReturnsToDecisionCue": true
   },
   "regressions": {
-    "core": 8,
+    "core": 9,
     "api": 13,
-    "browser": 12,
+    "browser": 14,
     "passed": true
   },
   "staticLocalSmoke": {
-    "testedAt": "2026-10-19T13:42:02.310Z",
+    "testedAt": "2026-10-19T14:00:31.461Z",
     "base": "Local static server under /medcue/",
-    "sampleReadyMs": 160,
+    "sampleReadyMs": 163,
     "measurement": "Single automation observation, not a performance benchmark or human task time",
     "imported": 14,
     "reviewed": 1,
     "advancedTo": 5,
     "exportTextAndTimingPassed": true,
     "localPlaybackPassed": true,
+    "undoReturnsToReviewedCue": true,
+    "refreshResumesSelectedCue": true,
+    "sampleAudioRestoresWithoutChangingProject": true,
     "noHorizontalOverflowAt390px": true,
     "apiRequests": [],
     "postRequests": [],
@@ -40,7 +45,7 @@
     "failedResponses": []
   },
   "publicationAudit": {
-    "stagedFiles": 83,
+    "stagedFiles": 87,
     "builtFiles": 16,
     "configuredCredentialMatch": false,
     "obviousSecretPatternOrPersonalAbsolutePathMatch": false,
@@ -48,15 +53,18 @@
     "limitations": "Automated index/build preflight plus manual source review; not an exhaustive privacy/security audit."
   },
   "hostedSmoke": {
-    "testedAt": "2026-10-19T13:44:42.366Z",
+    "testedAt": "2026-10-19T14:01:41.359Z",
     "base": "https://georgefifth.github.io/medcue/",
-    "sampleReadyMs": 815,
+    "sampleReadyMs": 828,
     "measurement": "Single automation observation, not a performance benchmark or human task time",
     "imported": 14,
     "reviewed": 1,
     "advancedTo": 5,
     "exportTextAndTimingPassed": true,
     "localPlaybackPassed": true,
+    "undoReturnsToReviewedCue": true,
+    "refreshResumesSelectedCue": true,
+    "sampleAudioRestoresWithoutChangingProject": true,
     "noHorizontalOverflowAt390px": true,
     "apiRequests": [],
     "postRequests": [],
@@ -117,19 +125,37 @@
   "publication": {
     "repository": "https://github.com/Georgefifth/medcue",
     "site": "https://georgefifth.github.io/medcue/",
-    "verifiedApplicationCommit": "e00210b7397edb2ed6f74e83f385f58dc1e9b184",
-    "workflow": "https://github.com/Georgefifth/medcue/actions/runs/39262477498"
+    "verifiedApplicationCommit": "21df00e64f363a02c6970f1b68c05013c1f3f19c",
+    "workflow": "https://github.com/Georgefifth/medcue/actions/runs/39264963523"
   },
   "deployedAssets": [
     {
-      "asset": "./assets/index-6NrVIA8i.js",
-      "sha256": "bdd6d2dd2d4e771aa2a32848b22cb3907e187ec8e27b6dbb9ca88fbe4599f6bd",
+      "asset": "./assets/index-d9XKe1Bu.js",
+      "sha256": "fbe2d2e2e5d2c7612c906b76318bd603d49b15620a16ba689c310b5dfd688287",
       "matchesLocalStaticBuild": true
     },
     {
-      "asset": "./assets/index-DkUwaR5P.css",
-      "sha256": "d6b0093002f637084ad8829514c63f5439ceb21122619dd4cb8af7cf3a535962",
+      "asset": "./assets/index-Bs_ILUot.css",
+      "sha256": "63e5b2fc1359c05a2629a51e00162c1e4f2258125f9a1e4320f84b9ccc1fcc22",
       "matchesLocalStaticBuild": true
     }
-  ]
+  ],
+  "submissionPolish": {
+    "applicationCommit": "21df00e64f363a02c6970f1b68c05013c1f3f19c",
+    "workflow": "https://github.com/Georgefifth/medcue/actions/runs/39264963523",
+    "browserRegressions": 14,
+    "coreAndApiChecks": 22,
+    "passed": true,
+    "noLiveInferenceCalls": true,
+    "pdf": {
+      "path": "output/pdf/medcue-project-description.pdf",
+      "pages": 1,
+      "fontsEmbedded": true,
+      "renderVisuallyInspected": true,
+      "textChecked": true
+    },
+    "demoVideoRecorded": false,
+    "devpostEntrySubmitted": false,
+    "previousNaturalAsrRunRemainsHistorical": true
+  }
 }

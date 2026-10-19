@@ -1,5 +1,7 @@
 # Delivery — 2026-10-19
 
+This report records the earlier improvement release. The subsequent submission-polish release and its current deployment verification are in [RELEASE-CANDIDATE.md](RELEASE-CANDIDATE.md); `verification.json` now records the latest release.
+
 ## Completed scope
 
 Five-alternative competition audit and real user-feedback review are in [COMPETITION.md](COMPETITION.md); bounded design/priorities and acceptance conditions are in [IMPROVEMENT-PLAN.md](IMPROVEMENT-PLAN.md). No accounts, paid trials, participant recruitment or new model calls were used for this iteration.

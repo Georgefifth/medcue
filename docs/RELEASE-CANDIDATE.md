@@ -27,3 +27,9 @@ The earlier full 257-cue natural-ASR evaluation remains historical evidence, wit
 ## Release decision
 
 Recommend freezing functionality after the deployed checks pass. The largest remaining uncertainties concern independent usability, demand and quality of error detection; additional interface features cannot resolve them. Prepare the narrated demonstration and clearly explain the optional AI deployment boundary. Submission instructions and the remaining materials are in [SUBMISSION.md](SUBMISSION.md). Actual release/deployment observations are recorded in `verification.json` under `submissionPolish`.
+
+## Publication verification
+
+Application commit `21df00e64f363a02c6970f1b68c05013c1f3f19c` passed [verification and Pages deployment](https://github.com/Georgefifth/medcue/actions/runs/39264963523). The actual [public website](https://georgefifth.github.io/medcue/) then passed the expanded hosted smoke, including refresh, undo and audio recovery with an unchanged serialized project. It had no page errors, failed responses, API/POST requests or 390-pixel horizontal overflow. Both deployed JS/CSS files matched the tested static build byte-for-byte. The earlier full-ASR evidence was not relabeled as a current run.
+
+The public page was also reloaded in the in-app browser and the new recovery control inspected. Publication preflight scanned 87 index files and 16 built files; no configured credential, obvious secret pattern or personal absolute path was found. `.env` remains excluded. This is a bounded preflight, not an exhaustive security audit.
