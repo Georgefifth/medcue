@@ -19,7 +19,7 @@ Five-alternative competition audit and real user-feedback review are in [COMPETI
 - 21 core/API checks passed (8 core, 13 API).
 - 12 browser regressions passed (8 retained, 4 new).
 - Normal and Pages production builds passed.
-- Local static smoke under `/medcue/` passed: sample audio ready in 162 ms in one automation observation, selected-cue playback, edited 14-cue export with original timestamps, one-action review/advance, no page errors, no failed responses, no API/POST requests, and no horizontal overflow at 390 px. This one local observation is not a network or user-efficiency benchmark.
+- Local static smoke under `/medcue/` passed: sample audio ready in 160 ms in one automation observation, selected-cue playback, edited 14-cue export with original timestamps, one-action review/advance, no page errors, no failed responses, no API/POST requests, and no horizontal overflow at 390 px. This one local observation is not a network or user-efficiency benchmark.
 - The improved server edition also passed the full 257-cue natural-ASR playback, speed, edit/undo and lossless export checks with no page errors or POST requests. New evidence was saved separately under ignored `artifacts/natural-asr/`; the frozen earlier study was not overwritten. The new source context and navigation controls have not been independently shown to improve error detection.
 
 ## Publication
@@ -30,12 +30,12 @@ The target `Georgefifth/medcue` did not exist at the initial check. The reposito
 
 - Repository: https://github.com/Georgefifth/medcue
 - Public site: https://georgefifth.github.io/medcue/
-- Verified application commit: `214853bef62e1b20acd50eb28ce31f690f5b427f`
-- Successful verification/deployment: https://github.com/Georgefifth/medcue/actions/runs/39260353800
+- Verified application commit: `e00210b7397edb2ed6f74e83f385f58dc1e9b184`
+- Successful verification/deployment: https://github.com/Georgefifth/medcue/actions/runs/39262477498
 
-The actual public site passed the same end-to-end smoke: real MP3 playback, editing, one-action review/advance, 14-cue SRT download with original timing, 390-pixel overflow check, zero API/POST requests, zero page errors and zero failed responses. The real sample was ready in **832 ms** in one automation observation; this is not a general speed claim. The site was also opened in the in-app browser and its loaded recording/context and static-edition limitation inspected.
+The actual public site passed the same end-to-end smoke: real MP3 playback, editing, one-action review/advance, 14-cue SRT download with original timing, 390-pixel overflow check, zero API/POST requests, zero page errors and zero failed responses. The real sample was ready in **815 ms** in one automation observation; this is not a general speed claim. The site was also opened in the in-app browser and its loaded recording/context and static-edition limitation inspected.
 
-The preflight scanned 82 staged files and 16 static artifact files: no configured key, obvious credential/private-key pattern or personal absolute path was found, and `.env` was excluded. This is a bounded scan plus manual review, not proof of comprehensive security. Large original evaluation audio/video and local ZIPs remain untracked; the intentionally public 301 KB NLM sample is included.
+The preflight scanned 83 staged files and 16 static artifact files: no configured key, obvious credential/private-key pattern or personal absolute path was found, and `.env` was excluded. This is a bounded scan plus manual review, not proof of comprehensive security. Large original evaluation audio/video and local ZIPs remain untracked; the intentionally public 301 KB NLM sample is included.
 
 ## Remaining limits
 
@@ -46,3 +46,5 @@ This is not a comprehensive subtitle editor or a validated medical-correction sy
 Sanitized before/after and hosted observations are recorded in `verification.json`. Screenshots are generated locally under `artifacts/`; the public source includes the regression and hosted-smoke scripts.
 
 Final compatibility refinement: replay uses Shift+Space rather than the Windows-reserved Alt+Space. The browser test verifies playback from the textarea without changing text or focus. The real recording example can also be explicitly reloaded from the sidebar after a refresh; replacement still asks for confirmation.
+
+The final deployed JavaScript and CSS were fetched and byte-compared with the verified local static build; both matched. The final evidence-only documentation commit does not change the deployed application revision listed above.

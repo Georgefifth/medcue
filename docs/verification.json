@@ -13,7 +13,9 @@
     "reviewAndAdvanceActions": 1,
     "realSampleHasMatchingAudio": true,
     "rawNlmSrtImport": "explicit preview and omission audit; 90 nonempty cues preserved",
-    "adjacentOriginalsVisible": true
+    "adjacentOriginalsVisible": true,
+    "replayShortcut": "Shift+Space; tested with textarea focus and no text insertion",
+    "sampleCanBeReloadedAfterRefresh": "Explicit sidebar action; replacement requires confirmation"
   },
   "regressions": {
     "core": 8,
@@ -22,9 +24,9 @@
     "passed": true
   },
   "staticLocalSmoke": {
-    "testedAt": "2026-10-19T13:22:33.654Z",
+    "testedAt": "2026-10-19T13:42:02.310Z",
     "base": "Local static server under /medcue/",
-    "sampleReadyMs": 162,
+    "sampleReadyMs": 160,
     "measurement": "Single automation observation, not a performance benchmark or human task time",
     "imported": 14,
     "reviewed": 1,
@@ -38,7 +40,7 @@
     "failedResponses": []
   },
   "publicationAudit": {
-    "stagedFiles": 82,
+    "stagedFiles": 83,
     "builtFiles": 16,
     "configuredCredentialMatch": false,
     "obviousSecretPatternOrPersonalAbsolutePathMatch": false,
@@ -46,9 +48,9 @@
     "limitations": "Automated index/build preflight plus manual source review; not an exhaustive privacy/security audit."
   },
   "hostedSmoke": {
-    "testedAt": "2026-10-19T13:32:28.893Z",
+    "testedAt": "2026-10-19T13:44:42.366Z",
     "base": "https://georgefifth.github.io/medcue/",
-    "sampleReadyMs": 832,
+    "sampleReadyMs": 815,
     "measurement": "Single automation observation, not a performance benchmark or human task time",
     "imported": 14,
     "reviewed": 1,
@@ -115,7 +117,19 @@
   "publication": {
     "repository": "https://github.com/Georgefifth/medcue",
     "site": "https://georgefifth.github.io/medcue/",
-    "verifiedApplicationCommit": "214853bef62e1b20acd50eb28ce31f690f5b427f",
-    "workflow": "https://github.com/Georgefifth/medcue/actions/runs/39260353800"
-  }
+    "verifiedApplicationCommit": "e00210b7397edb2ed6f74e83f385f58dc1e9b184",
+    "workflow": "https://github.com/Georgefifth/medcue/actions/runs/39262477498"
+  },
+  "deployedAssets": [
+    {
+      "asset": "./assets/index-6NrVIA8i.js",
+      "sha256": "bdd6d2dd2d4e771aa2a32848b22cb3907e187ec8e27b6dbb9ca88fbe4599f6bd",
+      "matchesLocalStaticBuild": true
+    },
+    {
+      "asset": "./assets/index-DkUwaR5P.css",
+      "sha256": "d6b0093002f637084ad8829514c63f5439ceb21122619dd4cb8af7cf3a535962",
+      "matchesLocalStaticBuild": true
+    }
+  ]
 }
