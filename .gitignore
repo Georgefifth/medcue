@@ -12,3 +12,9 @@ evaluation/public-audio/*.mp3
 evaluation/public-audio/*.zip
 evaluation/editor-study/*.zip
 evaluation/editor-study/upstream-tree.json
+
+# Generated demo delivery media; retain editable designs and sources.
+output/demo/*.mp4
+output/demo/*.zip
+output/demo/audio/
+output/demo/clips/

@@ -1,0 +1,42 @@
+// Reuse demo-recorder's capture manifest, speech, caption and composition code.
+// Add only the source-recording track that the recorder does not capture.
+const fs=require('node:fs');const path=require('node:path');const os=require('node:os');
+const {execFileSync}=require('node:child_process');
+const root=path.resolve(__dirname,'../../..');
+const output=path.join(root,'output/demo');
+const build=path.join(root,'artifacts/demo-build');
+const assembly=path.join(build,'assembly');fs.mkdirSync(assembly,{recursive:true});
+const scenes=require('./scenes.cjs');
+const recorder=process.env.MEDCUE_RECORDER_DIR||path.join(os.homedir(),'tools/demo-recorder');
+const {post}=require(path.join(recorder,'lib/post.js'));
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const duration=p=>Number(execFileSync('ffprobe',['-v','error','-show_entries','format=duration','-of','csv=p=0',p],{encoding:'utf8'}).trim());
+(async()=>{
+ const first=read(path.join(build,'film/timestamps.json'));
+ const retakePath=path.join(build,'live-final/timestamps.json');
+ const retakes=fs.existsSync(retakePath)?read(retakePath):[];
+ const replacement=new Map(retakes.map(m=>[m.name,m]));
+ const manifest=first.map((m,i)=>({...replacement.get(m.name)||m,idx:i}));
+ if(manifest.length!==scenes.length||manifest.some(m=>m.error||!m.file))throw new Error('Every scene needs a successful capture before composition.');
+ fs.writeFileSync(path.join(assembly,'timestamps.json'),JSON.stringify(manifest,null,2));
+ const narrated=path.join(assembly,'narrated.mp4');
+ await post(scenes,manifest,{outDir:assembly,width:1920,height:1080,voice:'en-US-ChristopherNeural',outFile:narrated,zoom:false,log:console.log});
+ let offset=0;const timeline=manifest.map((m,i)=>{const seconds=duration(path.join(assembly,'segs',`seg-${String(i).padStart(2,'0')}.mp4`));const entry={index:i,name:m.name,startSeconds:offset,durationSeconds:seconds,endSeconds:offset+seconds,kind:scenes[i].card?'designed-slide':i===1?'animated-explanation':'real-application',narration:scenes[i].vo||'',caption:scenes[i].caption||scenes[i].vo||''};offset+=seconds;return entry;});
+ const playbackIndex=scenes.findIndex(s=>s.name.includes('source audio playback'));
+ const playback=manifest[playbackIndex];
+ const focus=playback.focus?.at(-1);if(!focus)throw new Error('The source playback needs a recorded click timestamp.');
+ const {importSrt}=await import(path.join(root,'src/core.js'));
+ const cue=importSrt(fs.readFileSync(path.join(root,'public/sample/antibiotics.srt'),'utf8'))[3];
+ const sourceStart=Math.max(0,cue.from/1000-1),sourceEnd=cue.to/1000+0.5;
+ const audioAt=timeline[playbackIndex].startSeconds+focus.t;
+ const final=path.join(output,'medcue-demo.mp4');
+ const baseVideo=path.join(assembly,'base.mp4');
+ const assFile=path.join(assembly,'captions.ass').replaceAll('\\','\\\\').replaceAll(':','\\:').replaceAll("'","\\'");
+ execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',baseVideo,'-i',path.join(root,'public/sample/antibiotics.mp3'),'-filter_complex',`[0:v]drawbox=x=0:y=900:w=iw:h=180:color=0x143343:t=fill,subtitles=filename='${assFile}'[v];[1:a]atrim=start=${sourceStart}:end=${sourceEnd},asetpts=PTS-STARTPTS,aresample=48000,adelay=${Math.round(audioAt*1000)}:all=1[src];[0:a][src]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[a]`,'-map','[v]','-map','[a]','-c:v','libx264','-preset','medium','-crf','21','-c:a','aac','-b:a','160k','-movflags','+faststart',final],{stdio:['ignore','ignore','inherit']});
+ fs.writeFileSync(path.join(output,'timeline.json'),JSON.stringify({width:1920,height:1080,framesPerSecond:30,sourceTrack:{file:'NLM antibiotics excerpt',fromSeconds:sourceStart,toSeconds:sourceEnd,videoStartSeconds:audioAt,alignment:'Recorded playback-click timestamp, with scene range scaling from demo-recorder. Not a live system-audio capture.'},scenes:timeline},null,2));
+ const ass=fs.readFileSync(path.join(assembly,'captions.ass'),'utf8');
+ const stamp=t=>{const [h,m,s]=t.split(':');return `${h.padStart(2,'0')}:${m}:${s.replace('.',',').padEnd(6,'0')}`;};
+ const captions=ass.split('\n').filter(l=>l.startsWith('Dialogue:')).map((l,i)=>{const v=l.split(',');return `${i+1}\n${stamp(v[1])} --> ${stamp(v[2])}\n${v.slice(9).join(',').replaceAll('\\N','\n')}`;}).join('\n\n')+'\n';
+ fs.writeFileSync(path.join(output,'medcue-demo.srt'),captions);
+ console.log('Final video with aligned source audio: '+final);
+})().catch(e=>{console.error(e.message);process.exitCode=1;});

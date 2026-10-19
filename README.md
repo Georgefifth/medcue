@@ -95,6 +95,10 @@ Playwright needs its browser (`npx playwright install chromium`) or an explicit 
 
 Human time savings, medical correctness, retention and willingness to switch remain unverified. There are no fabricated participants, expert labels or productivity claims. The 30% time-saving idea remains an untested target.
 
+## Demo production
+
+The [visual demo kit](output/demo/README.md) includes an editable ten-slide PPTX, PNG assets, storyboard, captions and recorder scenes. The locally generated 1080p English MP4 combines actual app actions with diagrams and source audio; the large video/ZIP are local deliverables rather than repository media. Historical AI results are explicitly labeled. No model inference or new product performance study was conducted for the video.
+
 ## Architecture and reuse
 
 Vite + vanilla JavaScript, `@plussub/srt-vtt-parser` for parsing, WaveSurfer for audio and Lucide for icons. `src/core.js` owns import/export/rules/project validation; `src/main.js` owns the review UI and local draft; `server/ai.mjs` owns provider calls/quotas; `server/start.mjs` owns static serving and API routing. Keep the project format and original cue evidence intact.

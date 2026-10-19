@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-19",
+  "video": {
+    "durationSeconds": 183.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "sceneCount": 19,
+    "completeDecodePassed": true
+  },
+  "slideCount": 10,
+  "editableNativeDiagrams": true,
+  "nativeEvidenceChartWithEmbeddedWorkbook": true,
+  "pptxPackageValidationPassed": true,
+  "finalPptxRenderIdenticalToDesignPngs": true,
+  "slideVisualInspection": "Every designed slide inspected at full size. Every final scene sampled, with key live-action/caption frames reviewed at full size. No independent human review.",
+  "sourceAudioTechnicalCheck": {
+    "sourceExcerptSeconds": 5.52,
+    "waveformIdentityCorrelation": 0.9964328701673387,
+    "decodedSeekLagMs": -73.31249999999989,
+    "passed": true,
+    "method": "Compare a full source excerpt inside a larger decoded final-audio window. Initial fixed cropped-window normalization was unsuitable; the matched-window check confirms waveform identity and approximate placement within 100 ms. This is not ASR accuracy, human listening validation or sample-accurate screen synchronization."
+  },
+  "decodedAudioSamplePeakDb": -0.5,
+  "newMedicalModelCalls": 0,
+  "competitorResearchRepeated": false,
+  "fullProductTestSuiteRepeated": false,
+  "priorApplicationEvidence": "Application commit 21df00e64f363a02c6970f1b68c05013c1f3f19c: 22 core/API checks and 14 browser checks. Separate older natural-ASR checks cover 257 cues.",
+  "videoUploaded": false,
+  "devpostSubmitted": false,
+  "limitations": [
+    "Public Pages edition has no AI backend. The model responses shown are explicitly labeled historical selected cases.",
+    "The source clip is mixed from the same NLM sample rather than captured system audio. Alignment is approximate, not sample-accurate.",
+    "The presentation was rendered and re-imported with the bundled runtime; native PowerPoint opening was not tested. Install bundled fonts for editing.",
+    "Human time savings, medical correctness and competitive superiority remain unverified."
+  ]
+}

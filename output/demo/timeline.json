@@ -1,0 +1,204 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "framesPerSecond": 30,
+  "sourceTrack": {
+    "file": "NLM antibiotics excerpt",
+    "fromSeconds": 8.769,
+    "toSeconds": 14.289,
+    "videoStartSeconds": 39.19,
+    "alignment": "Recorded playback-click timestamp, with scene range scaling from demo-recorder. Not a live system-audio capture."
+  },
+  "scenes": [
+    {
+      "index": 0,
+      "name": "01 actual transcription example",
+      "startSeconds": 0,
+      "durationSeconds": 9.566667,
+      "endSeconds": 9.566667,
+      "kind": "designed-slide",
+      "narration": "Automatic captions can turn a medical term into a plausible word. MedCue helps education editors compare that text with the recording.",
+      "caption": "Automatic captions can turn a medical term into a plausible word. MedCue helps education editors compare that text with the recording."
+    },
+    {
+      "index": 1,
+      "name": "02 workflow focus",
+      "startSeconds": 9.566667,
+      "durationSeconds": 11.733333,
+      "endSeconds": 21.3,
+      "kind": "animated-explanation",
+      "narration": "Open the subtitles and matching audio. Listen to a cue, edit against the original, then review and continue. The editor controls every change.",
+      "caption": "Open the subtitles and matching audio. Listen to a cue, edit against the original, then review and continue. The editor controls every change."
+    },
+    {
+      "index": 2,
+      "name": "03 open the real application",
+      "startSeconds": 21.3,
+      "durationSeconds": 9.88,
+      "endSeconds": 31.18,
+      "kind": "real-application",
+      "narration": "Here is the working app. This example loads fourteen actual automatic captions and a matching public National Library of Medicine recording.",
+      "caption": "Here is the working app. This example loads fourteen actual automatic captions and a matching public National Library of Medicine recording."
+    },
+    {
+      "index": 3,
+      "name": "04 select the discrepant cue",
+      "startSeconds": 31.18,
+      "durationSeconds": 7.58,
+      "endSeconds": 38.76,
+      "kind": "real-application",
+      "narration": "Cue four contains the word mersa. Its original text and nearby context remain visible.",
+      "caption": "Cue four contains the word mersa. Its original text and nearby context remain visible."
+    },
+    {
+      "index": 4,
+      "name": "05 source audio playback",
+      "startSeconds": 38.76,
+      "durationSeconds": 7.77,
+      "endSeconds": 46.53,
+      "kind": "real-application",
+      "narration": "",
+      "caption": "Source recording: National Library of Medicine. Selected cue with context."
+    },
+    {
+      "index": 5,
+      "name": "06 annotated source evidence",
+      "startSeconds": 46.53,
+      "durationSeconds": 9.57,
+      "endSeconds": 56.1,
+      "kind": "designed-slide",
+      "narration": "The workspace separates the original evidence from the final subtitle. Listening guides the correction, while the original stays unchanged.",
+      "caption": "The workspace separates the original evidence from the final subtitle. Listening guides the correction, while the original stays unchanged."
+    },
+    {
+      "index": 6,
+      "name": "07 restore audio without replacing edits",
+      "startSeconds": 56.1,
+      "durationSeconds": 9.4,
+      "endSeconds": 65.5,
+      "kind": "real-application",
+      "narration": "After a refresh, the selected cue returns. Restore example audio reattaches the recording without replacing the review.",
+      "caption": "After a refresh, the selected cue returns. Restore example audio reattaches the recording without replacing the review."
+    },
+    {
+      "index": 7,
+      "name": "08 manual correction",
+      "startSeconds": 65.5,
+      "durationSeconds": 9.67,
+      "endSeconds": 75.17,
+      "kind": "real-application",
+      "narration": "After listening, the editor corrects the wording. This is a prepared demonstration, not an automatic correction or an accuracy test.",
+      "caption": "After listening, the editor corrects the wording. This is a prepared demonstration, not an automatic correction or an accuracy test."
+    },
+    {
+      "index": 8,
+      "name": "09 review and next",
+      "startSeconds": 75.17,
+      "durationSeconds": 6,
+      "endSeconds": 81.17,
+      "kind": "real-application",
+      "narration": "Review and next records the decision and selects the next cue in one action.",
+      "caption": "Review and next records the decision and selects the next cue in one action."
+    },
+    {
+      "index": 9,
+      "name": "10 undo returns to its cue",
+      "startSeconds": 81.17,
+      "durationSeconds": 6.533333,
+      "endSeconds": 87.703333,
+      "kind": "real-application",
+      "narration": "Undo restores the decision and returns to its cue, so a mistaken action is recoverable.",
+      "caption": "Undo restores the decision and returns to its cue, so a mistaken action is recoverable."
+    },
+    {
+      "index": 10,
+      "name": "11 export with pending review visible",
+      "startSeconds": 87.703333,
+      "durationSeconds": 7.27,
+      "endSeconds": 94.973333,
+      "kind": "real-application",
+      "narration": "Only one cue has been reviewed. Export keeps the remaining thirteen visible as pending.",
+      "caption": "Only one cue has been reviewed. Export keeps the remaining thirteen visible as pending."
+    },
+    {
+      "index": 11,
+      "name": "12 confirm the actual export",
+      "startSeconds": 94.973333,
+      "durationSeconds": 5,
+      "endSeconds": 99.973333,
+      "kind": "real-application",
+      "narration": "Every imported cue and its original timing will be included.",
+      "caption": "Every imported cue and its original timing will be included."
+    },
+    {
+      "index": 12,
+      "name": "13 inspect the actual downloaded content",
+      "startSeconds": 99.973333,
+      "durationSeconds": 7,
+      "endSeconds": 106.973333,
+      "kind": "real-application",
+      "narration": "This inspection overlay shows the actual downloaded text, not a replacement exporter.",
+      "caption": "This inspection overlay shows the actual downloaded text, not a replacement exporter."
+    },
+    {
+      "index": 13,
+      "name": "14 output comparison",
+      "startSeconds": 106.973333,
+      "durationSeconds": 8.61,
+      "endSeconds": 115.583333,
+      "kind": "designed-slide",
+      "narration": "The words change while the timestamps stay intact. A separate project file preserves review decisions and history.",
+      "caption": "The words change while the timestamps stay intact. A separate project file preserves review decisions and history."
+    },
+    {
+      "index": 14,
+      "name": "15 browser processing boundary",
+      "startSeconds": 115.583333,
+      "durationSeconds": 13.233333,
+      "endSeconds": 128.816666,
+      "kind": "designed-slide",
+      "narration": "The parser, waveform playback, glossary rules and draft storage run in the browser. Audio stays on the device. The public site supports this editing loop without a server.",
+      "caption": "The parser, waveform playback, glossary rules and draft storage run in the browser. Audio stays on the device. The public site supports this editing loop without a server."
+    },
+    {
+      "index": 15,
+      "name": "16 optional inference boundary",
+      "startSeconds": 128.816666,
+      "durationSeconds": 14.066667,
+      "endSeconds": 142.883333,
+      "kind": "designed-slide",
+      "narration": "The optional server edition sends only the selected cue and glossary after an explicit click. A guarded Node API contacts the configured model. The public Pages site does not run inference.",
+      "caption": "The optional server edition sends only the selected cue and glossary after an explicit click. A guarded Node API contacts the configured model. The public Pages site does not run inference."
+    },
+    {
+      "index": 16,
+      "name": "17 inconvenient model evidence",
+      "startSeconds": 142.883333,
+      "durationSeconds": 13.166667,
+      "endSeconds": 156.04999999999998,
+      "kind": "designed-slide",
+      "narration": "Earlier selected Gemini checks produced useful leads and a misplaced warning on a correct term. These are recorded responses. Suggestions are unverified and never apply themselves.",
+      "caption": "Earlier selected Gemini checks produced useful leads and a misplaced warning on a correct term. These are recorded responses. Suggestions are unverified and never apply themselves."
+    },
+    {
+      "index": 17,
+      "name": "18 bounded validation evidence",
+      "startSeconds": 156.04999999999998,
+      "durationSeconds": 17.18,
+      "endSeconds": 173.23,
+      "kind": "designed-slide",
+      "narration": "Developer checks preserved text and timestamps across two hundred fifty seven actual automatic caption cues. Twenty two core and API checks and fourteen browser tests pass. Human time savings and medical correctness remain unmeasured.",
+      "caption": "Developer checks preserved text and timestamps across two hundred fifty seven actual automatic caption cues. Twenty two core and API checks and fourteen browser tests pass. Human time savings and medical correctness remain unmeasured."
+    },
+    {
+      "index": 18,
+      "name": "19 try the public review loop",
+      "startSeconds": 173.23,
+      "durationSeconds": 10.233333,
+      "endSeconds": 183.46333299999998,
+      "kind": "designed-slide",
+      "narration": "Try the real recording at the public site. The source repository includes server setup, evaluation evidence and the limits of the prototype.",
+      "caption": "Try the real recording at the public site. The source repository includes server setup, evaluation evidence and the limits of the prototype."
+    }
+  ]
+}

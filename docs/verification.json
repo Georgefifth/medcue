@@ -154,8 +154,29 @@
       "renderVisuallyInspected": true,
       "textChecked": true
     },
-    "demoVideoRecorded": false,
+    "demoVideoRecorded": true,
     "devpostEntrySubmitted": false,
     "previousNaturalAsrRunRemainsHistorical": true
+  },
+  "demoProduction": {
+    "date": "2026-10-19",
+    "videoLocalPath": "output/demo/medcue-demo.mp4",
+    "durationSeconds": 183.5,
+    "width": 1920,
+    "height": 1080,
+    "sceneCount": 19,
+    "editableSlides": 10,
+    "newMedicalModelCalls": 0,
+    "videoUploaded": false,
+    "devpostSubmitted": false,
+    "report": "output/demo/VERIFICATION.json",
+    "publicationPreflight": {
+      "stagedFiles": 119,
+      "builtFiles": 16,
+      "configuredCredentialMatch": false,
+      "obviousSecretPatternOrPersonalAbsolutePathMatch": false,
+      "environmentFilesExcluded": true,
+      "limitations": "Automated index/build preflight plus manual source review; not an exhaustive privacy/security audit."
+    }
   }
 }

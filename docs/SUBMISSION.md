@@ -5,7 +5,7 @@
 - Public interactive editing demo: https://georgefifth.github.io/medcue/
 - Source and server setup: https://github.com/Georgefifth/medcue
 - One-page project description: [PDF](../output/pdf/medcue-project-description.pdf). The PDF has embedded fonts, one page, working links and a visually checked rendering. It describes shipped features and evaluation limits.
-- Demonstration script below. A narrated demo video has **not** been recorded or uploaded. No Devpost entry has been submitted by this project workflow.
+- A narrated 1080p English video has now been rendered locally at `output/demo/medcue-demo.mp4` (approximately 3 minutes 4 seconds), with captions, designed explanations, actual product actions and the NLM source excerpt. It has **not** been uploaded to a video host. The final visual edit is documented in [the storyboard](../output/demo/STORYBOARD.md); the earlier short recording script below remains an optional shorter version. No Devpost entry has been submitted by this project workflow.
 
 The [UnivaBio overview](https://univabio.devpost.com/) lists an interactive project, demo video, one-page PDF and “Github Repository / Code PDF.” The wording on the last item is ambiguous; check the actual submission form for whether a separate code PDF is required. Do not upload `.env`, keys, personal files or dependency/generated directories in a code attachment.
 

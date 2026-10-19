@@ -1,0 +1,143 @@
+1
+00:00:00,150 --> 00:00:04,690
+Automatic captions can turn a medical term into a plausible word.
+
+2
+00:00:04,690 --> 00:00:09,450
+MedCue helps education editors compare that text with the recording.
+
+3
+00:00:09,700 --> 00:00:12,810
+Open the subtitles and matching audio.
+
+4
+00:00:12,810 --> 00:00:18,470
+Listen to a cue, edit against the original, then review and continue.
+
+5
+00:00:18,470 --> 00:00:21,180
+The editor controls every change.
+
+6
+00:00:21,430 --> 00:00:23,110
+Here is the working app.
+
+7
+00:00:23,110 --> 00:00:28,970
+This example loads fourteen actual automatic captions and a matching public National
+
+8
+00:00:28,970 --> 00:00:31,060
+Library of Medicine recording.
+
+9
+00:00:31,310 --> 00:00:38,640
+Cue four contains the word mersa. Its original text and nearby context remain visible.
+
+10
+00:00:38,890 --> 00:00:46,410
+Source recording: National Library of Medicine. Selected cue with context.
+
+11
+00:00:46,660 --> 00:00:51,390
+The workspace separates the original evidence from the final subtitle.
+
+12
+00:00:51,390 --> 00:00:55,990
+Listening guides the correction, while the original stays unchanged.
+
+13
+00:00:56,240 --> 00:00:59,490
+After a refresh, the selected cue returns.
+
+14
+00:00:59,490 --> 00:01:05,390
+Restore example audio reattaches the recording without replacing the review.
+
+15
+00:01:05,640 --> 00:01:09,160
+After listening, the editor corrects the wording.
+
+16
+00:01:09,160 --> 00:01:15,060
+This is a prepared demonstration, not an automatic correction or an accuracy test.
+
+17
+00:01:15,310 --> 00:01:21,060
+Review and next records the decision and selects the next cue in one action.
+
+18
+00:01:21,310 --> 00:01:27,580
+Undo restores the decision and returns to its cue, so a mistaken action is recoverable.
+
+19
+00:01:27,830 --> 00:01:34,850
+Only one cue has been reviewed. Export keeps the remaining thirteen visible as pending.
+
+20
+00:01:35,100 --> 00:01:39,850
+Every imported cue and its original timing will be included.
+
+21
+00:01:40,100 --> 00:01:46,850
+This inspection overlay shows the actual downloaded text, not a replacement exporter.
+
+22
+00:01:47,100 --> 00:01:50,800
+The words change while the timestamps stay intact.
+
+23
+00:01:50,800 --> 00:01:55,460
+A separate project file preserves review decisions and history.
+
+24
+00:01:55,710 --> 00:02:02,040
+The parser, waveform playback, glossary rules and draft storage run in the browser.
+
+25
+00:02:02,040 --> 00:02:08,680
+Audio stays on the device. The public site supports this editing loop without a server.
+
+26
+00:02:08,930 --> 00:02:15,250
+The optional server edition sends only the selected cue and glossary after an explicit
+
+27
+00:02:15,250 --> 00:02:19,440
+ click. A guarded Node API contacts the configured model.
+
+28
+00:02:19,440 --> 00:02:22,740
+The public Pages site does not run inference.
+
+29
+00:02:22,990 --> 00:02:29,400
+Earlier selected Gemini checks produced useful leads and a misplaced warning on a correct
+
+30
+00:02:29,400 --> 00:02:35,890
+term. These are recorded responses. Suggestions are unverified and never apply themselves.
+
+31
+00:02:36,140 --> 00:02:42,240
+Developer checks preserved text and timestamps across two hundred fifty seven actual
+
+32
+00:02:42,240 --> 00:02:48,640
+ automatic caption cues. Twenty two core and API checks and fourteen browser tests pass.
+
+33
+00:02:48,640 --> 00:02:53,070
+Human time savings and medical correctness remain unmeasured.
+
+34
+00:02:53,320 --> 00:02:56,350
+Try the real recording at the public site.
+
+35
+00:02:56,350 --> 00:03:02,570
+The source repository includes server setup, evaluation evidence and the limits of the
+
+36
+00:03:02,570 --> 00:03:03,290
+prototype.

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "01-problem",
+    "page": 1,
+    "png": "assets/01-problem.png"
+  },
+  {
+    "id": "02-workflow",
+    "page": 2,
+    "png": "assets/02-workflow.png"
+  },
+  {
+    "id": "03-listen-focus",
+    "page": 3,
+    "png": "assets/03-listen-focus.png"
+  },
+  {
+    "id": "04-workspace",
+    "page": 4,
+    "png": "assets/04-workspace.png"
+  },
+  {
+    "id": "05-local-architecture",
+    "page": 5,
+    "png": "assets/05-local-architecture.png"
+  },
+  {
+    "id": "06-ai-architecture",
+    "page": 6,
+    "png": "assets/06-ai-architecture.png"
+  },
+  {
+    "id": "07-output",
+    "page": 7,
+    "png": "assets/07-output.png"
+  },
+  {
+    "id": "08-evidence",
+    "page": 8,
+    "png": "assets/08-evidence.png"
+  },
+  {
+    "id": "09-ai-limits",
+    "page": 9,
+    "png": "assets/09-ai-limits.png"
+  },
+  {
+    "id": "10-try",
+    "page": 10,
+    "png": "assets/10-try.png"
+  }
+]
